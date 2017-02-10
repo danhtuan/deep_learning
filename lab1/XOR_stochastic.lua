@@ -1,16 +1,17 @@
 require "nn"
 require 'nngraph'
-
-
+require 'cunn'
+require 'gnuplot'
 mlp = nn.Sequential();  -- make a multi-layer perceptron
 inputs = 2; outputs = 1; HUs = 10; -- parameters
 mlp:add(nn.Linear(inputs, HUs))
 mlp:add(nn.Tanh())
 mlp:add(nn.Linear(HUs, outputs))
 
-
 criterion = nn.MSECriterion()
 
+
+sse = torch.Tensor(250)
 for i = 1,25000 do
   -- random sample
   local input= torch.randn(2);     -- normally distributed example in 2d
@@ -22,7 +23,10 @@ for i = 1,25000 do
   end
 
   -- feed it to the neural network and the criterion
-  criterion:forward(mlp:forward(input), output)
+  local loss = criterion:forward(mlp:forward(input), output)
+  if(i % 100 == 0) then
+    sse[i/100] = loss
+  end
 
   -- train over this example in 3 steps
   -- (1) zero the accumulation of the gradients
@@ -30,11 +34,6 @@ for i = 1,25000 do
   -- (2) accumulate gradients
   mlp:backward(input, criterion:backward(mlp.output, output))
   -- (3) update parameters with a 0.01 learning rate
-  mlp:updateParameters(0.01)
+  mlp:updateParameters(10)
 end
-
-x = torch.Tensor(2)
-x[1] =  0.5; x[2] =  0.5; print(mlp:forward(x))
-x[1] =  0.5; x[2] = -0.5; print(mlp:forward(x))
-x[1] = -0.5; x[2] =  0.5; print(mlp:forward(x))
-x[1] = -0.5; x[2] = -0.5; print(mlp:forward(x))
+gnuplot.plot(sse, '+-')
