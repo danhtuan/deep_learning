@@ -22,6 +22,7 @@ module:add(nn.LogSoftMax())
 -- Use the cross-entropy performance index
 criterion = nn.ClassNLLCriterion()
 
+
 require 'optim'
 -- allocate a confusion matrix
 cm = optim.ConfusionMatrix(10)
@@ -29,7 +30,7 @@ cm = optim.ConfusionMatrix(10)
 function classEval(module, inputs, targets)
    cm:zero()
    for idx=1,inputs:size(1) do
-      local input, target = inputs[idx], targets:narrow(1,idx,1)
+      local input, target = inputs[idx], targets[idx]
       local output = module:forward(input)
       cm:add(output, target)
    end
@@ -55,7 +56,7 @@ function trainEpoch(module, criterion, inputs, targets)
    end
 end
 
- bestAccuracy, bestEpoch = 0, 0
+bestAccuracy, bestEpoch = 0, 0
 wait = 0
 for epoch=1,30 do
    trainEpoch(module, criterion, trainInputs, trainTargets)
