@@ -22,6 +22,15 @@ module:add(nn.LogSoftMax())
 -- Use the cross-entropy performance index
 criterion = nn.ClassNLLCriterion()
 
+require 'cunn'
+module:cuda()
+criterion:cuda()
+trainInputs:cuda()
+trainTargets:cuda()
+validInputs:cuda()
+validTargets:cuda()
+testInputs:cuda()
+testTargets:cuda()
 
 require 'optim'
 -- allocate a confusion matrix
@@ -56,6 +65,10 @@ function trainEpoch(module, criterion, inputs, targets)
    end
 end
 
+--Run the training
+require 'sys'
+tick = sys.clock()
+
 bestAccuracy, bestEpoch = 0, 0
 wait = 0
 for epoch=1,30 do
@@ -73,3 +86,7 @@ for epoch=1,30 do
 end
 testAccuracy = classEval(module, testInputs, testTargets)
 print(string.format("Test Accuracy : %f ", testAccuracy))
+
+tock = sys.clock()
+duration = tock -tick
+print('Duration: '..(duration * 1000)..'ms')
