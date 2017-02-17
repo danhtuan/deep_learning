@@ -4,5 +4,5 @@
 * Spring 2017
 
 ## Mini Project 1
-[Mini Projet 1 Report](prj1\Miniproject1.md)
+[Mini Projet 1 Report](prj1/Miniproject1.md)
 
