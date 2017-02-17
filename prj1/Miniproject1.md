@@ -23,12 +23,12 @@ To make it run on GPU, following code added to the original code:
 require 'cunn'
 module:cuda()
 criterion:cuda()
-trainInputs:cuda()
-trainTargets:cuda()
-validInputs:cuda()
-validTargets:cuda()
-testInputs:cuda()
-testTargets:cuda()
+trainInputs = trainInputs:cuda()
+trainTargets = trainTargets:cuda()
+validInputs = validInputs:cuda()
+validTargets = validTargets:cuda()
+testInputs = testInputs:cuda()
+testTargets = testTargets:cuda()
 ```
 
 __NOTE__ When running the new code, following error message can appear:
@@ -100,10 +100,6 @@ end
 Here is the output:
 
 ```
-Program starting as '"/opt/zbstudio/bin/linux/x64/lua" -e "io.stdout:setvbuf('no')" "/home/martin/Desktop/tuandn/deep_learning/prj1/train_mnist_minibatch.lua"'.
-Program 'lua' started in '/opt/zbstudio/myprograms' (pid: 29171).
-tput: No value for $TERM and no -T specified
-1x28x28
 New maxima : 0.902500 @ 1.000000
 Test Accuracy : 0.910500 
 Duration: 78874.533891678ms
