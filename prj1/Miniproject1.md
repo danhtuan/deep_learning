@@ -111,6 +111,27 @@ __NOTE__
 
 ## 4. Number of layers vs. Number of Neurons
 
+Current code to create a two-layer network:
+
+```lua
+-- Create a two-layer network
+module = nn.Sequential()
+module:add(nn.Convert('bchw', 'bf')) -- collapse 3D to 1D
+module:add(nn.Linear(1*28*28, 20))
+module:add(nn.Tanh())
+module:add(nn.Linear(20, 10))
+module:add(nn.LogSoftMax()) 
+```
+
+The number of weights and biases:
+* Input Layer:
+
+> 20 * 28 * 28 = 15,680 (weights) and 20 (biases)
+
+* Output Layer:
+
+> 10 * 20 = 200 (weights) and 10 (biases)
+
 ## 5. Gradient vs. Alternative functions
 
 ## 6. Conclusion
