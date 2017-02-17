@@ -23,8 +23,6 @@ module:add(nn.LogSoftMax())
 -- Use the cross-entropy performance index
 criterion = nn.ClassNLLCriterion()
 
-
-
 require 'optim'
 -- allocate a confusion matrix
 cm = optim.ConfusionMatrix(10)
@@ -49,7 +47,7 @@ local batchSize = 100 -- batch size
 
 function trainEpoch(module, criterion, inputs, targets)        
     local numBatch = inputs:size(1)/batchSize -- number of batches
-    print(inputs[1]:size(1)..'x'..inputs[1]:size(2)..'x'..inputs[1]:size(3))
+    --print(inputs[1]:size(1)..'x'..inputs[1]:size(2)..'x'..inputs[1]:size(3))
     for i = 1, numBatch do
       local idx = math.random(1, numBatch) -- random minibatch
       local batchInputs = torch.DoubleTensor(batchSize, 1, 28, 28)
@@ -58,7 +56,7 @@ function trainEpoch(module, criterion, inputs, targets)
       for j = 1, batchSize do
         local ref_idx = (idx - 1)  * batchSize + j
         batchInputs[j] = inputs[ref_idx]
-        batchLabels[j] = targets:narrow(1, ref_idx, 1)          
+        batchLabels[j] = targets[ref_idx]          
       end
       --train using mini-batch
       function feval(params)
@@ -80,7 +78,7 @@ tick = sys.clock()
 
 bestAccuracy, bestEpoch = 0, 0
 wait = 0
-for epoch=1,1 do
+for epoch=1,2 do
    trainEpoch(module, criterion, trainInputs, trainTargets)
    local validAccuracy = classEval(module, validInputs, validTargets)
    if validAccuracy > bestAccuracy then
@@ -90,7 +88,7 @@ for epoch=1,1 do
       wait = 0
    else
       wait = wait + 1
-      if wait > 1 then break end
+      if wait > 2 then break end
    end
 end
 testAccuracy = classEval(module, testInputs, testTargets)
