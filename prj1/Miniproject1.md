@@ -4,10 +4,14 @@
  - Advisor: Dr. Martin Hagan
  - Link: https://github.com/danhtuan/deep_learning/
  
+## Abstract
+
+The [MNIST dataset](http://yann.lecun.com/exdb/mnist/) provides a training set of 60,000 handwritten digits and a test set of 10,000 handwritten digits. The images have a size of 28×28 pixels. We want to train a Neural Network to recognize handwritten digits.
+
 ## 1. Run the program on CPU
 Here is the screenshot of the Output:
 
-![CPU Screen](imgs/cpu_screen.png)
+![CPU Screen](cpu_screen.png)
 
 __NOTE__
 - It took **881.89 seconds** to finish
@@ -19,12 +23,12 @@ To make it run on GPU, following code added to the original code:
 require 'cunn'
 module:cuda()
 criterion:cuda()
-trainInputs:cuda()
-trainTargets:cuda()
-validInputs:cuda()
-validTargets:cuda()
-testInputs:cuda()
-testTargets:cuda()
+trainInputs = trainInputs:cuda()
+trainTargets = trainTargets:cuda()
+validInputs = validInputs:cuda()
+validTargets = validTargets:cuda()
+testInputs = testInputs:cuda()
+testTargets = testTargets:cuda()
 ```
 
 __NOTE__ When running the new code, following error message can appear:
@@ -42,7 +46,7 @@ luarocks install cunn
 
 After fixing, here is the screenshot of the output:
 
-![GPU_Screen](imgs/gpu_screen.png)
+![GPU_Screen](gpu_screen.png)
 
 __NOTE__ 
 * It took **734.82 seconds** to finish, *which is a little bit faster than CPU version*
@@ -96,10 +100,6 @@ end
 Here is the output:
 
 ```
-Program starting as '"/opt/zbstudio/bin/linux/x64/lua" -e "io.stdout:setvbuf('no')" "/home/martin/Desktop/tuandn/deep_learning/prj1/train_mnist_minibatch.lua"'.
-Program 'lua' started in '/opt/zbstudio/myprograms' (pid: 29171).
-tput: No value for $TERM and no -T specified
-1x28x28
 New maxima : 0.902500 @ 1.000000
 Test Accuracy : 0.910500 
 Duration: 78874.533891678ms
@@ -132,7 +132,32 @@ The number of weights and biases:
 
 > 10 * 20 = 200 (weights) and 10 (biases)
 
+I experimented with 3 network configuration as following:
+* 1 layers MLP
+* 2 layers MLP
+* 3 layers MLP
+```lua
+if opt.model == 'mlp2' then
+        --1st layer
+        module:add(nn.Linear(1*28*28, 20))
+        module:add(nn.Tanh())
+        --2nd layer
+        module:add(nn.Linear(20, 10))
+elseif opt.model == 'mlp3' then
+        module:add(nn.Linear(1*28*28, 15))
+        module:add(nn.Tanh())
+        module:add(nn.Linear(15,10))
+        module:add(nn.Tanh())
+        --output layer
+        module:add(nn.Linear(10,10))
+elseif opt.model == 'linear' then
+        module:add(nn.Linear(1*28*28, 10))
+end
+
+```
+
 ## 5. Gradient vs. Alternative functions
+
 
 ## 6. Conclusion
 * Learned how to run the program on CPU and GPU, can compare the performance
