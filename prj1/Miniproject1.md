@@ -11,7 +11,7 @@ The [MNIST dataset](http://yann.lecun.com/exdb/mnist/) provides a training set o
 ## 1. Run the program on CPU
 Here is the screenshot of the Output:
 
-![CPU Screen](imgs/cpu_screen.png)
+![CPU Screen](cpu_screen.png)
 
 __NOTE__
 - It took **881.89 seconds** to finish
@@ -46,7 +46,7 @@ luarocks install cunn
 
 After fixing, here is the screenshot of the output:
 
-![GPU_Screen](imgs/gpu_screen.png)
+![GPU_Screen](gpu_screen.png)
 
 __NOTE__ 
 * It took **734.82 seconds** to finish, *which is a little bit faster than CPU version*
