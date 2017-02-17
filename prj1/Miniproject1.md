@@ -9,7 +9,9 @@ Here is the screenshot of the Output:
 
 ![CPU Screen](imgs/cpu_screen.png)
 
-It took **881.89 seconds** to finish
+__NOTE__
+- It took **881.89 seconds** to finish
+- The accuracy on test set is lower than on validation set, which is reasonable because test set is *NOT* used to train
 
 ## 2. Modify the code to run on GPU
 To make it run on GPU, following code added to the original code:
@@ -42,6 +44,8 @@ After fixing, here is the screenshot of the output:
 
 ![GPU_Screen](imgs/gpu_screen.png)
 
+__NOTE__ 
+* It took **734.82 seconds** to finish, *which is a little bit faster than CPU version*
 
-
+## Minimatches vs Stochastic Gradient Descent
 
