@@ -205,7 +205,8 @@ Duration: 271843.0109024ms
 __NOTE__
 * In comparison with 2 layers, 1 layer is faster and less accurate
 * An experiment with 3 layers network will be updated soon on my github repo
-*
+
+
 ## 5. Gradient vs. Alternative functions
 The original program using Gradient Descent. In this section, a [LBFGS](https://en.wikipedia.org/wiki/Limited-memory_BFGS) method is used as following:
 
