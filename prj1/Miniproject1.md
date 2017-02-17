@@ -7,5 +7,41 @@
 ## 1. Run the program on CPU
 Here is the screenshot of the Output:
 
+![CPU Screen](imgs/cpu_screen.png)
+
+It took **881.89 seconds** to finish
+
+## 2. Modify the code to run on GPU
+To make it run on GPU, following code added to the original code:
+```lua
+require 'cunn'
+module:cuda()
+criterion:cuda()
+trainInputs:cuda()
+trainTargets:cuda()
+validInputs:cuda()
+validTargets:cuda()
+testInputs:cuda()
+testTargets:cuda()
+```
+
+__NOTE__ When running the new code, following error message can appear:
+
+>cannot convert 'struct THLongTensor *' to 'struct THCudaLongTensor *'
+
+The reason for this is due to **nn, cunn, torch, cutorch** are out-of-date. The bug has been found and fixed in the new update. Please update using `luarocks` as following:
+
+```
+luarocks install torch
+luarocks install nn
+luarocks install cutorch
+luarocks install cunn
+```
+
+After fixing, here is the screenshot of the output:
+
+![GPU_Screen](imgs/gpu_screen.png)
+
+
 
 
