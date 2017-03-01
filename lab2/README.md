@@ -34,3 +34,8 @@ Python uses indentation to structure the code. In Java or C/C++, characters {} a
 7. How do you execute a Python program from the command line?
  * Uses `python 'file.py'`
  * Uses `python` to go into the intepreter environment then `execfile('file.py')`
+ 
+ ## Square Diamon Pattern Recognition
+ ### Procedures
+ * Go to iPython interactive intepreter
+ * Run `run SquareDiamondLMDB.py`
