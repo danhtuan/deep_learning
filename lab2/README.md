@@ -95,8 +95,7 @@
   ```
   <img src="one_kernel.png" width=300/>|<img src="all_kernels.png" width=300/>
 :-------------------------:|:-------------------------:
- <img src="feature_map.png" width=300/>|<img src="training_loss.png" width=300/>  
- :-------------------------:|:-------------------------:
+ <img src="feature_map.png" width=300/>|<img src="training_loss.png" width=300/> 
  <img src="test_accuracy.png" width=300/> |   
   
 * Run `run SquareDiamon_Batch.py`
