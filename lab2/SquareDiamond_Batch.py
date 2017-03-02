@@ -5,7 +5,7 @@ import numpy
 import numpy as np
 import matplotlib.pyplot as plt
 ############################################Pre Processing Data##############################################################
-my_root = '/home/martin/Desktop/Caffe_Files/caffe_example/SquareDiamond'
+my_root = '/home/martin/Desktop/tuandn/git_repo/deep_learning/lab2'
 os.chdir(my_root)
 
 #######################################Train the Network with the Solver######################################################

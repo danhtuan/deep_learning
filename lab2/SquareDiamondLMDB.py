@@ -3,7 +3,7 @@ import caffe
 import lmdb
 import numpy as np
 ############################################Pre Processing Data##############################################################
-my_root = '/home/martin/Desktop/Caffe_Files/caffe_example/SquareDiamond'
+my_root = '/home/martin/Desktop/tuandn/git_repo/deep_learning/lab2'
 os.chdir(my_root)
 ############################################Pre Processing Data##############################################################
 
