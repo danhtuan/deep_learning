@@ -93,9 +93,9 @@
   ```python
   In [4]: run SquareDiamond.py
   ```
-  Solarized dark             |  Solarized Ocean
+  <img src="one_kernel.png" width=100/>|<img src="all_kernels.png" width=100/>
 :-------------------------:|:-------------------------:
-![one_kernel](one_kernel.png) |  ![all_kernels](all_kernels.png)
+ <img src="feature_map.png" width=100/>|<img src="training_lost.png" width=100/>  
    
   
 * Run `run SquareDiamon_Batch.py`
