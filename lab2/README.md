@@ -97,6 +97,6 @@
 :-------------------------:|:-------------------------:
  <img src="feature_map.png" width=300/>|<img src="training_loss.png" width=300/>  
  :-------------------------:|:-------------------------:
- <img src="test_accuracy.png" |   
+ <img src="test_accuracy.png" width=300/> |   
   
 * Run `run SquareDiamon_Batch.py`
