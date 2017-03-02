@@ -57,6 +57,12 @@
   export CAFFE_ROOT=/home/martin/caffe
   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
   ```
+* Install lmdb lib for python
+  ```bash
+  sudo python -mpip lmdb
+  ```
+* Add folder testMylmdbTest and copy all from testMylmdb
+
 * Go to iPython interactive intepreter
   ```bash
   martin@martin-XPS-8700:~/Desktop/tuandn/git_repo/deep_learning/lab2$ ipython
@@ -87,6 +93,9 @@
   ```python
   In [4]: run SquareDiamond.py
   ```
-  ![]() ![]()
+  Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![one_kernel](one_kernel.png) |  ![all_kernels](all_kernels.png)
+   
   
 * Run `run SquareDiamon_Batch.py`
