@@ -48,7 +48,7 @@
  * At bash, run `ipython` then `run file.py`
   
 ## Square Diamon Pattern Recognition
-### Procedures
+### Run the programs
 * Append following lines to ~/.bashrc to set up environment variables
   
   ```bash
@@ -89,7 +89,7 @@
   y	
   ```
   
-* Run `run SquareDiamon.py`
+* Run `run SquareDiamon.py` and `run SquareDiamon_Batch.py`
   ```python
   In [4]: run SquareDiamond.py
   ```
@@ -98,4 +98,30 @@
  <img src="feature_map.png" width=300/>|<img src="training_loss.png" width=300/> 
  <img src="test_accuracy.png" width=300/> |   
   
-* Run `run SquareDiamon_Batch.py`
+### Modify Learning Rate and Momentum
+* Learning Rate = 0.3
+  
+  ```
+  IPython CPU timings (estimated):
+  User   :       4.26 s.
+  System :       0.82 s.
+  Wall time:      80.72 s.
+  ```
+
+* Learning Rate = 0.1
+  
+  ```
+  IPython CPU timings (estimated):
+  User   :       3.57 s.
+  System :       0.37 s.
+  Wall time:      18.67 s.
+  ```
+* Learning Rate = 0.005
+  ```
+  IPython CPU timings (estimated):
+  User   :       3.42 s.
+  System :       0.32 s.
+  Wall time:      16.74 s.
+  ```
+
+  
