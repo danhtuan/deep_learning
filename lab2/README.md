@@ -42,10 +42,28 @@
  * Debugger is much more flexible and informative than intepreter (breakpoints, controls, watch,..)
 
 7. How do you execute a Python program from the command line?
- * Uses `python 'file.py'`
- * Uses `python` to go into the intepreter environment then `execfile('file.py')`
- 
- ## Square Diamon Pattern Recognition
- ### Procedures
- * Go to iPython interactive intepreter
- * Run `run SquareDiamondLMDB.py`
+
+ * At bash, run `python 'file.py'`
+ * At bash run `python` to go into the intepreter environment, then `execfile('file.py')`
+ * At bash, run `ipython` then `run file.py`
+  
+## Square Diamon Pattern Recognition
+### Procedures
+* Go to iPython interactive intepreter
+  ```bash
+  martin@martin-XPS-8700:~/Desktop/tuandn/git_repo/deep_learning/lab2$ ipython
+  Python 2.7.6 (default, Jun 22 2015, 17:58:13) 
+  Type "copyright", "credits" or "license" for more information.
+
+  IPython 2.3.0 -- An enhanced Interactive Python.
+  ?         -> Introduction and overview of IPython's features.
+  %quickref -> Quick reference.
+  help      -> Python's own help system.
+  object?   -> Details about 'object', use 'object??' for extra details.
+
+  In [1]: 
+  ```
+  
+* Run `run SquareDiamondLMDB.py`
+* Run `run SquareDiamon.py`
+* Run `run SquareDiamon_Batch.py`
