@@ -49,6 +49,14 @@
   
 ## Square Diamon Pattern Recognition
 ### Procedures
+* Append following lines to ~/.bashrc to set up environment variables
+  
+  ```bash
+  #tuan added March 1 for caffe import python
+  export PYTHONPATH=$PYTHONPATH:/home/martin/caffe/python
+  export CAFFE_ROOT=/home/martin/caffe
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+  ```
 * Go to iPython interactive intepreter
   ```bash
   martin@martin-XPS-8700:~/Desktop/tuandn/git_repo/deep_learning/lab2$ ipython
@@ -65,5 +73,20 @@
   ```
   
 * Run `run SquareDiamondLMDB.py`
+  
+  ```python
+  In [2]: run SquareDiamondLMDB.py
+  In [3]: who
+  N	 X	 caffe	 d1	 d2	 d3	 d4	 d5	 datum	 
+  diamond	 env	 file_content	 fo	 i	 lmdb	 map_size	 my_root np	 
+  os	 s1	 s2	 s3	 s4	 s5	 square	 str_id	 txn	 
+  y	
+  ```
+  
 * Run `run SquareDiamon.py`
+  ```python
+  In [4]: run SquareDiamond.py
+  ```
+  ![]() ![]()
+  
 * Run `run SquareDiamon_Batch.py`
