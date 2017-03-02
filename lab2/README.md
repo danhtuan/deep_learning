@@ -99,29 +99,60 @@
  <img src="test_accuracy.png" width=300/> |   
   
 ### Modify Learning Rate and Momentum
-* Learning Rate = 0.3
-  
-  ```
-  IPython CPU timings (estimated):
-  User   :       4.26 s.
-  System :       0.82 s.
-  Wall time:      80.72 s.
-  ```
+Keep Momentum = 0.9 and modify the Learning Rate in `Square_diamond_solver.prototext`
+  * Learning Rate = 0.3
 
-* Learning Rate = 0.1
+    ```
+    IPython CPU timings (estimated):
+    User   :       4.26 s.
+    System :       0.82 s.
+    Wall time:      80.72 s.
+    ```
+
+  * Learning Rate = 0.1
+
+    ```
+    IPython CPU timings (estimated):
+    User   :       3.57 s.
+    System :       0.37 s.
+    Wall time:      18.67 s.
+    ```
+  * Learning Rate = 0.005
+
+    ```
+    IPython CPU timings (estimated):
+    User   :       3.42 s.
+    System :       0.32 s.
+    Wall time:      16.74 s.
+    ```
+ As it shows, the Learning Rate = 0.005 is the best among 3 tested ones. Now fixing the Learning Rate = 0.005, the script was ran with 3 momentum as following:
+ 
+  * Momentum = 0.5
   
   ```
   IPython CPU timings (estimated):
-  User   :       3.57 s.
-  System :       0.37 s.
-  Wall time:      18.67 s.
+  User   :       3.18 s.
+  System :       0.34 s.
+  Wall time:      13.75 s.
   ```
-* Learning Rate = 0.005
+  * Momentum = 1.5
+  
+  ```
+  /usr/local/lib/python2.7/dist-packages/numpy/ma/core.py:4144: UserWarning: Warning: converting a masked element to nan.
+  warnings.warn("Warning: converting a masked element to nan.")
+  ```
+  
+  * Momentum = 0.005
+  
   ```
   IPython CPU timings (estimated):
-  User   :       3.42 s.
-  System :       0.32 s.
-  Wall time:      16.74 s.
+  User   :       3.41 s.
+  System :       0.33 s.
+  Wall time:      17.55 s.
   ```
+As shown, Momentum = 0.9 is the best in System time while Momentum = 0.5 is the best in User code time.
+
+  
+  
 
   
