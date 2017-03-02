@@ -93,9 +93,10 @@
   ```python
   In [4]: run SquareDiamond.py
   ```
-  <img src="one_kernel.png" width=100/>|<img src="all_kernels.png" width=100/>
+  <img src="one_kernel.png" width=300/>|<img src="all_kernels.png" width=300/>
 :-------------------------:|:-------------------------:
- <img src="feature_map.png" width=100/>|<img src="training_lost.png" width=100/>  
-   
+ <img src="feature_map.png" width=300/>|<img src="training_loss.png" width=300/>  
+ :-------------------------:|:-------------------------:
+ <img src="test_accuracy.png" |   
   
 * Run `run SquareDiamon_Batch.py`
