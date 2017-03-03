@@ -211,6 +211,175 @@ Keep Momentum = 0.9 and modify the Learning Rate in `Square_diamond_solver.proto
 As shown, Momentum = 0.9 is the best in System time while Momentum = 0.5 is the best in User code time.
 
 ## 4. Adding two more layers
+### 4.1 Prototxt Modification
+
+```
+name: "SquareDiamondNet"
+
+layer {
+  name: "data"
+  type: "Data"
+  top: "input"
+  top: "target"
+  include {
+    phase: TRAIN
+  }
+
+
+  data_param {
+    source: "testMylmdb"
+    batch_size: 8
+    backend: LMDB
+  }
+}
+
+layer {
+  name: "data"
+  type: "Data"
+  top: "input"
+  top: "target"
+  include {
+    phase: TEST
+  }
+
+
+  data_param {
+    source: "testMylmdbTest"
+    batch_size: 8
+    backend: LMDB
+  }
+}
+
+layer {
+  name: "conv1"
+  type: "Convolution"
+  bottom: "input"
+  top: "conv1"
+
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  convolution_param {
+    num_output: 4
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+
+}
+layer {
+  name: "relu1"
+  type: "ReLU"
+  bottom: "conv1"
+  top: "conv1"
+}
+layer {
+  name: "pool1"
+  type: "Pooling"
+  bottom: "conv1"
+  top: "pool1"
+  pooling_param {
+    pool: MAX
+    kernel_size: 3
+    stride: 3
+  }
+}
+
+layer {
+  name: "conv2"
+  type: "Convolution"
+  bottom: "pool1"
+  top: "conv2"
+
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  convolution_param {
+    num_output: 4
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+
+}
+layer {
+  name: "relu2"
+  type: "ReLU"
+  bottom: "conv2"
+  top: "conv2"
+}
+layer {
+  name: "pool2"
+  type: "Pooling"
+  bottom: "conv2"
+  top: "pool2"
+  pooling_param {
+    pool: MAX
+    kernel_size: 3
+    stride: 3
+  }
+}
+layer {
+  name: "fc"
+  type: "InnerProduct"
+  bottom: "pool2"
+  top: "fc"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+
+layer {
+  name: "accuracy"
+  type: "Accuracy"
+  bottom: "fc"
+  bottom: "target"
+  top: "accuracy"
+  include {
+    phase: TEST
+  }
+}
+
+layer {
+ name: "loss"
+ type: "SoftmaxWithLoss"
+ bottom: "fc"
+ bottom: "target"
+ top: "loss"
+ }
+
+```
+### 4.2 Running and check performance
   
   
 
