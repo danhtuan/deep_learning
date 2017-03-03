@@ -4,7 +4,7 @@
 * Deep Learning - Spring 2017
 * Advisor: Dr. Martin Hagan
 
-## Python Basics
+## 1. Python Basics
 1. What is an ”immutable” object? Give some examples.
 
   Objects whose value is unchangeable once they are created are called immutable. Example:
@@ -47,8 +47,8 @@
  * At bash run `python` to go into the intepreter environment, then `execfile('file.py')`
  * At bash, run `ipython` then `run file.py`
   
-## Python programm for HW1-Problem3
-### Python code
+## 2. Python programm for HW1-Problem3
+### 2.1 Python code
 
 ```python
   1 import matplotlib
@@ -105,8 +105,8 @@
 And here is the plot of loss function vs iteration
 ![loss](hw3_plot.png)
 
-## Square Diamon Pattern Recognition
-### Run the programs
+## 3. Square Diamon Pattern Recognition
+### 3.1 Run the programs
 * Append following lines to ~/.bashrc to set up environment variables
   
   ```bash
@@ -156,7 +156,7 @@ And here is the plot of loss function vs iteration
  <img src="feature_map.png" width=300/>|<img src="training_loss.png" width=300/> 
  <img src="test_accuracy.png" width=300/> |   
   
-### Modify Learning Rate and Momentum
+### 3.2 Modify Learning Rate and Momentum
 Keep Momentum = 0.9 and modify the Learning Rate in `Square_diamond_solver.prototext`
   * Learning Rate = 0.3
 
@@ -210,7 +210,7 @@ Keep Momentum = 0.9 and modify the Learning Rate in `Square_diamond_solver.proto
   ```
 As shown, Momentum = 0.9 is the best in System time while Momentum = 0.5 is the best in User code time.
 
-## Adding two more layers
+## 4. Adding two more layers
   
   
 
