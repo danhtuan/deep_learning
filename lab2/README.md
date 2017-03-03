@@ -102,6 +102,8 @@
  49 runtest()
 
 ```
+And here is the plot of loss function vs iteration
+![loss](hw3_plot.png)
 
 ## Square Diamon Pattern Recognition
 ### Run the programs
