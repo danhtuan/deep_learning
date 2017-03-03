@@ -47,6 +47,62 @@
  * At bash run `python` to go into the intepreter environment, then `execfile('file.py')`
  * At bash, run `ipython` then `run file.py`
   
+## Python programm for HW1-Problem3
+### Python code
+
+```python
+  1 import matplotlib
+  2 matplotlib.use('gtk')
+  3 import matplotlib.pyplot as plt
+  4 import numpy as np
+  5 
+  6 R = 1
+  7 Q = 3
+  8 lr = 0.01
+  9 
+ 10 x = np.zeros((2,1))
+ 11 P = np.array([-1, 0, 1]).reshape(3,1)
+ 12 T = np.array([-1.5, 0, 2.5]).reshape(3,1)
+ 13 G = np.array([[-1,0,1], [1,1,1]]).T
+ 14 
+ 15 c = np.dot(T.T, T)
+ 16 d = np.dot(G.T, T) * (-2)
+ 17 A = np.dot(G.T, G) * 2
+ 18 
+ 19 def floss():
+ 20    F = np.dot(np.dot(x.T, A), x)
+ 21    F = F + np.dot(d.T, x)
+ 22    F = F + c
+ 23    return F
+ 24 
+ 25 def df():
+ 26     delta = np.dot(A, x)
+ 27     delta = delta + d
+ 28     return delta
+ 29 
+ 30 def update(grad):
+ 31     global x
+ 32     x = x - grad * lr
+ 33 
+ 34 sse = np.zeros(1000)
+ 35 
+ 36 def runtest():
+ 37     global sse
+ 38     iter = 0
+ 39     sse[iter] = floss()
+ 40     grad = df()
+ 41     print('iter[{0}]: x={1} floss={2} grad={3}'.format(iter, x, floss(), np.linalg.norm(grad)))
+ 42     while (np.linalg.norm(grad) >= 0.01) & (iter < 999):
+ 43         iter = iter + 1
+ 44         grad = df()
+ 45         update(grad)
+ 46         sse[iter] = floss()
+ 47         print('iter[{0}]: x={1} floss={2} grad={3}'.format(iter, x, floss(), np.linalg.norm(grad)))
+ 48     plt.plot(sse[0:iter])
+ 49 runtest()
+
+```
+
 ## Square Diamon Pattern Recognition
 ### Run the programs
 * Append following lines to ~/.bashrc to set up environment variables
