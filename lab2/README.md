@@ -210,6 +210,7 @@ Keep Momentum = 0.9 and modify the Learning Rate in `Square_diamond_solver.proto
   ```
 As shown, Momentum = 0.9 is the best in System time while Momentum = 0.5 is the best in User code time.
 
+## Adding two more layers
   
   
 
