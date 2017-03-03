@@ -40,7 +40,7 @@ layer {
   bottom: "input"
   top: "conv1"
 
-param {
+  param {
     lr_mult: 1
   }
   param {
