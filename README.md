@@ -3,7 +3,7 @@
 * Advisor: Dr. Martin Hagan
 * Spring 2017
 
-## Mini Project 1
+## Reports
 [Mini Projet 1 Report](prj1/Miniproject1.md)
 
 [Lab 2 Report](lab2/README.md)
