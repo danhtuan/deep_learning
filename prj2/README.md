@@ -103,3 +103,21 @@ IPython CPU timings (estimated):
 Wall time:      60.55 s.
 ```
 
+### 4.3 BS = 8 (1/8 of default) --> Better speed but Accuracy is not good 
+
+```
+IPython CPU timings (estimated):
+  User   :      27.39 s.
+  System :       4.52 s.
+Wall time:      82.52 s.
+```
+
+### 4.3 BS = 1 (1/64 of default) --> Accuracy is really bad (0.07) and Error observed
+
+```
+Iteration 1900 testing... accuracy: 0.070000000298
+/usr/local/lib/python2.7/dist-packages/numpy/ma/core.py:4144: UserWarning: Warning: converting a masked element to nan.
+  warnings.warn("Warning: converting a masked element to nan.")
+```
+
+Based on observation, BS = 32 is the best in speed given the constraint about Accuracy.
