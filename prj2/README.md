@@ -161,10 +161,10 @@ Test Accuracy (No Dropout) | Test Accuracy (Dropout)
 Based on above information, Dropout doesn't change too much running time while making the accuracy line smoother. So it is safe to say it helps improve the testing error. 
 
 ## 6. Deep Learning vs. Narrow Wide Learning
-The original lenet has 2 convolution layers and 2 pooling layers. To make it narrower but wider, I have modified it to make it having only 1 convolution layer and 1 pooling layer but increase the kernels/feature maps per layer. Here is the prototxt for the new network:
+The original lenet has 2 convolution layers and 2 pooling layers. To make it narrower but wider, I have modified it to make it having only 1 convolution layer and 1 pooling layer but increase the kernels/feature maps per layer from 20 to 70 (which equals to sum of two convolution layers). Here is the prototxt for the new network:
 
 ```
-layer {
+ 36 layer {
  37   name: "conv1"
  38   type: "Convolution"
  39   bottom: "data"
@@ -200,3 +200,17 @@ layer {
  69 }
 
 ```
+
+Here is the test accuracy and training loss for the narrow wide network:
+Test Accuracy | Training Loss
+:---------------------------------:|:---------------------------------:
+<img src="wider.png" width=500/>|<img src="wider_loss.png" width=500/>
+
+Here is the timing for the narrow wide network:
+
+```
+```
+
+As shown above, the narrow wide network is a little bit faster than the deep network but it comes with less accuracy. 
+
+## 7. Alternative Training Function
