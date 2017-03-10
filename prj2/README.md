@@ -158,4 +158,7 @@ Test Accuracy (No Dropout) | Test Accuracy (Dropout)
 :---------------------------------:|:---------------------------------:
 <img src="figure_6.png" width=500/>|<img src="dropout.png" width=500/>
 
-Based on above information, Dropout doesn't add too much time and makes the accuracy line smoother. So it is safe to say it helps improve the testing error. 
+Based on above information, Dropout doesn't change too much running time while making the accuracy line smoother. So it is safe to say it helps improve the testing error. 
+
+## 6. Deep Learning vs. Narrow Wide Learning
+
