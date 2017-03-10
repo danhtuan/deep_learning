@@ -24,14 +24,53 @@ All kernels for Conv1 | One kernel for Conv1
 
 Investigating into above kernels, we can see that different kernels try to explor different `features`, or in this case, different `textures/edges` in the images of numerals. The given specific kernel, for example, is helpful for numerals that have the diagonal edges/curve (back slash/curve) such as `6, 8, 9`. 
 
-## 3. Performance CVN vs. Multilayer Networks
+## 3. Performance Convolution Network (CVN) vs. Multilayer Network (MLP)
 ### 3.1 Accuracy
-* On training set
+Here is the output when runing MLP:
 
-Convolution Network | Multilayers Network
-:---------------------------------:|:---------------------------------:
-<img src="figure_2.png" width=500/>|<img src="test_accuracy.png" width=500/>
+![mlp_out](../prj1/gpu_screen.png)
 
-Based on above figures, both CVN and MLP can reach maximum accuracy but MLP is faster in reaching maximum. It is worth to mention that this is on the training set, not the test set. So it is hard to compare which one is better based on this.
+And here is the output when runing CVN:
 
-* On test set
+```
+Iteration 1900 testing... accuracy: 0.990000009537
+data	(128, 1, 28, 28)
+label	(128,)
+conv1	(128, 20, 24, 24)
+pool1	(128, 20, 12, 12)
+conv2	(128, 50, 8, 8)
+pool2	(128, 50, 4, 4)
+ip1	(128, 500)
+ip2	(128, 10)
+loss	()
+conv1	(20, 1, 5, 5) (20,)
+conv2	(50, 20, 5, 5) (50,)
+ip1	(500, 800) (500,)
+ip2	(10, 500) (10,)
+
+IPython CPU timings (estimated):
+  User   :      84.52 s.
+  System :      14.62 s.
+Wall time:     128.77 s.
+```
+As shown, the CVN is better in term of accuracy in comparison with MLP. However, it is worth to mention here that I am not sure whether the CVN accuracy is for the TEST set or just TRAINING set (I am doubt that it is TRAINING set). Based on LeCun's website, though:
+* Convolutional net LeNet-5, [no distortions]	-- > 0.95 %lost	
+* 3-layer NN, 500+150 hidden units	-->	2.95 %lost
+So it is reasonable to conclude that CVN is better than MLP in this criteria.
+
+### 3.2 Performance
+
+For CVN timings:
+
+```
+IPython CPU timings (estimated):
+  User   :      84.52 s.
+  System :      14.62 s.
+Wall time:     128.77 s.
+```
+
+For MLP timings:
+
+![mlp_out](../prj1/gpu_screen.png)
+
+Intuitively, CVN is slower than MLP, partly because the convolution is normally slower than matrix multiplication. However, it is shown above that MLP is much slower. Because Miniproject 1 uses Torch and Miniprojet 2 uses Caffe, the comparison is not fair and may be used as reference only.
