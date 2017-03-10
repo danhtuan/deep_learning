@@ -246,3 +246,15 @@ solver_mode: GPU
 type: "AdaDelta"
 delta: 1e-6
 ```
+
+### 7.2 Python
+
+```
+solver = caffe.AdaDeltaSolver('lenet_solver.prototxt')
+```
+
+### 7.3 Outputs
+
+Test Accuracy (No Dropout) | Test Accuracy (Dropout)
+:---------------------------------:|:---------------------------------:
+<img src="ada_delta.png" width=500/>|<img src="ada_delta_loss.png" width=500/>
