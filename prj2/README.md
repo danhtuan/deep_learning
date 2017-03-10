@@ -77,7 +77,8 @@ For MLP timings:
 Intuitively, CVN is slower than MLP, partly because the convolution is normally slower than matrix multiplication. However, it is shown above that MLP is much slower in total time. It is reasonable because CVN might converge faster than MLP. However, because Miniproject 1 uses Torch and Miniprojet 2 uses Caffe, the comparison is not fair and may be used as reference only.
 
 ## 4. Minibatches Size (BS)
-### 4.1 BS = 64 (default)
+### 4.1 Experiment
+* BS = 64 (default)
 
 ```
 IPython CPU timings (estimated):
@@ -85,7 +86,7 @@ IPython CPU timings (estimated):
   System :      10.18 s.
 Wall time:     155.99 s.
 ```
-### 4.2 BS = 128 (double of default) 
+*  BS = 128 (double of default) 
 
 ```
 IPython CPU timings (estimated):
@@ -94,7 +95,7 @@ IPython CPU timings (estimated):
 Wall time:     128.77 s.
 ```
 
-### 4.3 BS = 32 (half of default)
+* BS = 32 (half of default)
 
 ```
 IPython CPU timings (estimated):
@@ -103,7 +104,7 @@ IPython CPU timings (estimated):
 Wall time:      60.55 s.
 ```
 
-### 4.3 BS = 8 (1/8 of default) --> Better speed but Accuracy is not good 
+* BS = 8 (1/8 of default) --> Better speed but Accuracy is not good 
 
 ```
 IPython CPU timings (estimated):
@@ -112,7 +113,7 @@ IPython CPU timings (estimated):
 Wall time:      82.52 s.
 ```
 
-### 4.3 BS = 1 (1/64 of default) --> Accuracy is really bad (0.07) and Error observed
+*  BS = 1 (1/64 of default) --> Accuracy is really bad (0.07) and Error observed
 
 ```
 Iteration 1900 testing... accuracy: 0.070000000298
@@ -120,4 +121,4 @@ Iteration 1900 testing... accuracy: 0.070000000298
   warnings.warn("Warning: converting a masked element to nan.")
 ```
 
-Based on observation, BS = 32 is the best in speed given the constraint about Accuracy.
+*Based on observation, BS = 32 is the best in speed given the constraint about Accuracy.*
