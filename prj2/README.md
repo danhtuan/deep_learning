@@ -53,7 +53,7 @@ IPython CPU timings (estimated):
   System :      14.62 s.
 Wall time:     128.77 s.
 ```
-As shown, the CVN is better in term of accuracy in comparison with MLP. However, it is worth to mention here that I am not sure whether the CVN accuracy is for the TEST set or just TRAINING set (I am doubt that it is TRAINING set). Based on LeCun's website, though:
+As shown, the CVN is better in term of accuracy in comparison with MLP. Based on LeCun's website, though:
 * Convolutional net LeNet-5, [no distortions]	-- > 0.95 %lost	
 * 3-layer NN, 500+150 hidden units	-->	2.95 %lost
 
@@ -161,4 +161,6 @@ Test Accuracy (No Dropout) | Test Accuracy (Dropout)
 Based on above information, Dropout doesn't change too much running time while making the accuracy line smoother. So it is safe to say it helps improve the testing error. 
 
 ## 6. Deep Learning vs. Narrow Wide Learning
+The original lenet has 2 convolution layers and 2 pooling layers. To make it narrower but wider, I have modified it to make it having only 1 convolution layer and 1 pooling layer but double the kernels/feature maps per layer. Here is the prototxt for the new network:
+
 
