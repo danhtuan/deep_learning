@@ -121,6 +121,10 @@ Iteration 1900 testing... accuracy: 0.070000000298
   warnings.warn("Warning: converting a masked element to nan.")
 ```
 
-*Based on observation, BS = 32 is the best in speed given the constraint about Accuracy.*
-
 ### 4.2 Comparison
+Bigger Batch Size | Smaller Batch Size
+:----:|:----:
+more accurate | less accurate
+slower training | faster training
+
+*Based on observation, BS = 32 is the best in speed given the constraint about Accuracy.*
