@@ -157,3 +157,5 @@ Wall time:     131.81 s.
 Test Accuracy (No Dropout) | Test Accuracy (Dropout)
 :---------------------------------:|:---------------------------------:
 <img src="figure_6.png" width=500/>|<img src="dropout.png" width=500/>
+
+Based on above information, Dropout doesn't add too much time and makes the accuracy line smoother. So it is safe to say it helps improve the testing error. 
