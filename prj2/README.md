@@ -7,64 +7,22 @@
 * Download 4 data files and unzip
 * Modify create_mnist.sh
 * Modify prototxt files
-
+* Run `train_mnist.py` file and observe the outputs as following:
 
 <img src="figure_1.png" width=300/>|<img src="figure_2.png" width=300/>
 :---------------------------------:|:---------------------------------:
 <img src="figure_3.png" width=300/>|<img src="figure_4.png" width=300/>
 <img src="figure_5.png" width=300/>|
+
 ## 2. Investigate the kernels
 
-Two convolution layers are defined in file `lenet_train_test.prototxt` as following:
+Basically, each kernel is used to explor a specific `feature` in the input data. The provided CVN uses two convolution layers, the first convolution layer has 20 kernels and the second one has 50 kernels. Below is all 20 kernels and one specific kernel respectively for the first layer.
 
-```
-layer {
-  name: "conv1"
-  type: "Convolution"
-  bottom: "data"
-  top: "conv1"
-  param {
-    lr_mult: 1
-  }
-  param {
-    lr_mult: 2
-  }
-  convolution_param {
-    num_output: 20
-    kernel_size: 5
-    stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
-  }
-}
-layer {
-  name: "conv2"
-  type: "Convolution"
-  bottom: "pool1"
-  top: "conv2"
-  param {
-    lr_mult: 1
-  }
-  param {
-    lr_mult: 2
-  }
-  convolution_param {
-    num_output: 50
-    kernel_size: 5
-    stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
-  }
-}
-```
+All kernels for Conv1 | One kernel for Conv1
+:---------------------------------:|:---------------------------------:
+<img src="figure_4.png" width=500/>|<img src="figure_5.png" width=500/>
+
+Investigating into above kernels, we can see that different kernels try to explor different `feautures`, or in this case, different `textures/edges` in the images of numerals. The given specific kernel, for example, is helpful for numerals that have the diagonal edges/curve (back slash/curve) such as `3, 5, 6, 8, 9`. 
 
 ## 3. Performance CVN vs. Multilayer Networks
 ### Accuracy
