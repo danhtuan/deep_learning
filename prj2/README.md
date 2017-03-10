@@ -56,6 +56,7 @@ Wall time:     128.77 s.
 As shown, the CVN is better in term of accuracy in comparison with MLP. However, it is worth to mention here that I am not sure whether the CVN accuracy is for the TEST set or just TRAINING set (I am doubt that it is TRAINING set). Based on LeCun's website, though:
 * Convolutional net LeNet-5, [no distortions]	-- > 0.95 %lost	
 * 3-layer NN, 500+150 hidden units	-->	2.95 %lost
+
 So it is reasonable to conclude that CVN is better than MLP in this criteria.
 
 ### 3.2 Performance
@@ -73,4 +74,32 @@ For MLP timings:
 
 ![mlp_out](../prj1/gpu_screen.png)
 
-Intuitively, CVN is slower than MLP, partly because the convolution is normally slower than matrix multiplication. However, it is shown above that MLP is much slower. Because Miniproject 1 uses Torch and Miniprojet 2 uses Caffe, the comparison is not fair and may be used as reference only.
+Intuitively, CVN is slower than MLP, partly because the convolution is normally slower than matrix multiplication. However, it is shown above that MLP is much slower in total time. It is reasonable because CVN might converge faster than MLP. However, because Miniproject 1 uses Torch and Miniprojet 2 uses Caffe, the comparison is not fair and may be used as reference only.
+
+## 4. Minibatches Size (BS)
+### 4.1 BS = 64 (default)
+
+```
+IPython CPU timings (estimated):
+  User   :      54.06 s.
+  System :      10.18 s.
+Wall time:     155.99 s.
+```
+### 4.2 BS = 128 (double of default) 
+
+```
+IPython CPU timings (estimated):
+  User   :      84.52 s.
+  System :      14.62 s.
+Wall time:     128.77 s.
+```
+
+### 4.3 BS = 32 (half of default)
+
+```
+IPython CPU timings (estimated):
+  User   :      37.98 s.
+  System :       6.54 s.
+Wall time:      60.55 s.
+```
+
