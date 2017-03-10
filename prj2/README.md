@@ -25,7 +25,13 @@ All kernels for Conv1 | One kernel for Conv1
 Investigating into above kernels, we can see that different kernels try to explor different `features`, or in this case, different `textures/edges` in the images of numerals. The given specific kernel, for example, is helpful for numerals that have the diagonal edges/curve (back slash/curve) such as `6, 8, 9`. 
 
 ## 3. Performance CVN vs. Multilayer Networks
-### Accuracy
-* Convolution Networks
+### 3.1 Accuracy
+* On training set
 
-* Multiplayers Networks
+Convolution Network | Multilayers Network
+:---------------------------------:|:---------------------------------:
+<img src="figure_2.png" width=500/>|<img src="test_accuracy.png" width=500/>
+
+Based on above figures, both CVN and MLP can reach maximum accuracy but MLP is faster in reaching maximum. It is worth to mention that this is on the training set, not the test set. So it is hard to compare which one is better based on this.
+
+* On test set
