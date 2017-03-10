@@ -128,3 +128,32 @@ more accurate | less accurate
 slower training | faster training
 
 *Based on observation, BS = 32 is the best in speed given the constraint about Accuracy.*
+
+## 5. Dropout Layer
+
+Dropout layer is claimed a simple way to reduce/prevent overfitting in training NN. Here I added a dropout layer at fully-connected layer (fc or ip) as following:
+
+```
+125 layer{
+126     name: "dropout1"
+127     type: "Dropout"
+128     bottom: "ip1"
+129     top: "ip1"
+130     dropout_param {
+131         dropout_ratio: 0.5
+132     }
+133 }
+```
+
+Here is the running time and test accuracy:
+
+```
+IPython CPU timings (estimated):
+  User   :      52.60 s.
+  System :      10.15 s.
+Wall time:     131.81 s.
+```
+
+Test Accuracy (No Dropout) | Test Accuracy (Dropout)
+:---------------------------------:|:---------------------------------:
+<img src="figure_6.png" width=500/>|<img src="dropout.png" width=500/>
