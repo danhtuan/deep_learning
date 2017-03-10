@@ -22,7 +22,7 @@ All kernels for Conv1 | One kernel for Conv1
 :---------------------------------:|:---------------------------------:
 <img src="figure_4.png" width=500/>|<img src="figure_5.png" width=500/>
 
-Investigating into above kernels, we can see that different kernels try to explor different `feautures`, or in this case, different `textures/edges` in the images of numerals. The given specific kernel, for example, is helpful for numerals that have the diagonal edges/curve (back slash/curve) such as `3, 5, 6, 8, 9`. 
+Investigating into above kernels, we can see that different kernels try to explor different `features`, or in this case, different `textures/edges` in the images of numerals. The given specific kernel, for example, is helpful for numerals that have the diagonal edges/curve (back slash/curve) such as `6, 8, 9`. 
 
 ## 3. Performance CVN vs. Multilayer Networks
 ### Accuracy
