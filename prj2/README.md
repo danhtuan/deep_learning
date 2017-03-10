@@ -8,9 +8,11 @@
 * Modify create_mnist.sh
 * Modify prototxt files
 
-| <img src="figure_1.png" width=300/>|<img src="figure_2.png" width=300/>|
-|<img src="figure_3.png" width=300/> |<img src="figure_4.png" width=300/>|
-| <img src="figure_5.png" width=300/>|
+
+<img src="figure_1.png" width=300/>|<img src="figure_2.png" width=300/>
+:---------------------------------:|:---------------------------------:
+<img src="figure_3.png" width=300/>|<img src="figure_4.png" width=300/>
+<img src="figure_5.png" width=300/>|
 ## 2. Investigate the kernels
 
 Two convolution layers are defined in file `lenet_train_test.prototxt` as following:
