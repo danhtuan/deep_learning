@@ -122,3 +122,5 @@ Iteration 1900 testing... accuracy: 0.070000000298
 ```
 
 *Based on observation, BS = 32 is the best in speed given the constraint about Accuracy.*
+
+### 4.2 Comparison
