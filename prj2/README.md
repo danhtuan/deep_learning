@@ -218,4 +218,31 @@ Wall time:      63.28 s.
 
 As shown above, the narrow wide network is a little bit faster than the deep network but it comes with less accuracy. 
 
-## 7. Alternative Training Function
+## 7. Alternative Training Function (AdaDelta)
+### 7.1 Solver prototxt
+```
+# The train/test net protocol buffer definition
+net: "/home/martin/Desktop/tuandn/git_repo/deep_learning/prj2/lenet_train_test.prototxt"
+# test_iter specifies how many forward passes the test should carry out.
+# In the case of MNIST, we have test batch size 100 and 100 test iterations,
+# covering the full 10,000 testing images.
+test_iter: 100
+# Carry out testing every 500 training iterations.
+test_interval: 500
+# The base learning rate, momentum and the weight decay of the network.
+base_lr: 1.0
+lr_policy: "fixed"
+momentum: 0.95
+weight_decay: 0.0005
+# Display every 100 iterations
+display: 100
+# The maximum number of iterations
+max_iter: 10000
+# snapshot intermediate results
+# snapshot: 500
+#snapshot_prefix: "examples/mnist/lenet_adadelta"
+# solver mode: CPU or GPU
+solver_mode: GPU
+type: "AdaDelta"
+delta: 1e-6
+```
