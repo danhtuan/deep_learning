@@ -255,6 +255,10 @@ solver = caffe.AdaDeltaSolver('lenet_solver.prototxt')
 
 ### 7.3 Outputs
 
-Test Accuracy (No Dropout) | Test Accuracy (Dropout)
+Test Accuracy  | Loss
 :---------------------------------:|:---------------------------------:
 <img src="ada_delta.png" width=500/>|<img src="ada_delta_loss.png" width=500/>
+
+### 7.4 Comparison
+The AdaDelta (type: "AdaDelta") method (M. Zeiler [1]) is a “robust learning rate method”. It is a gradient-based optimization method (like SGD). Because AdaDelta is also based on gradient, the performance is pretty the same as SGD
+
