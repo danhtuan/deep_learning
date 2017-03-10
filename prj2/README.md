@@ -202,6 +202,7 @@ The original lenet has 2 convolution layers and 2 pooling layers. To make it nar
 ```
 
 Here is the test accuracy and training loss for the narrow wide network:
+
 Test Accuracy | Training Loss
 :---------------------------------:|:---------------------------------:
 <img src="wider.png" width=500/>|<img src="wider_loss.png" width=500/>
@@ -209,6 +210,10 @@ Test Accuracy | Training Loss
 Here is the timing for the narrow wide network:
 
 ```
+IPython CPU timings (estimated):
+  User   :      32.57 s.
+  System :       5.72 s.
+Wall time:      63.28 s.
 ```
 
 As shown above, the narrow wide network is a little bit faster than the deep network but it comes with less accuracy. 
