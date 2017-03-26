@@ -4,7 +4,8 @@
 * Spring 2017
 
 ## Reports
-[Mini Projet 1 Report](prj1/Miniproject1.md)
-
-[Lab 2 Report](lab2/README.md)
+ 1. [Mini Projet 1 Report](prj1/Miniproject1.md)
+ 2. [Lab 2 Report](lab2/README.md)
+ 3. [Mini Project 2 Report](prj2/README.md)
+ 4. [Final Project](final_prj/README.md)
 
