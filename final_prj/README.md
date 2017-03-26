@@ -8,11 +8,13 @@ In [1]
 ## Project Report
 
 ## References
-[1][Training and investigating Residual Nets](http://torch.ch/blog/2016/02/04/resnets.html)
+ 1. [Training and investigating Residual Nets](http://torch.ch/blog/2016/02/04/resnets.html)
 
-[2][Deep Residual Learning for Image Recognition]
+ 2. [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)
 
-[3][http://image-net.org]
+ 3. [http://image-net.org](http://image-net.org)
+
+ 4. [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io)
 
 
 
