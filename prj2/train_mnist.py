@@ -18,7 +18,7 @@ caffe.set_device(0)
 caffe.set_mode_gpu()
 
 # Use SGDSolver, namely stochastic gradient descent algorithm
-solver = caffe.AdaDeltaSolver('lenet_solver.prototxt')
+solver = caffe.AdamSolver('lenet_solver.prototxt')
 
 niter =2000
 test_interval = 100
