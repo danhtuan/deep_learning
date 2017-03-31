@@ -17,11 +17,13 @@ For the sake of simplicity, I selected Convolutional Neural Network. In specific
 To benchmarking between half-precision, single precision and double precision, I will use 3 criterias:
  * Error Rates
  * Time
+
 ### Estimated Schedule
  * Design: 1 week
  * Implementation: 1 week
  * Test/Debug: 1.5 week
  * Collect Data/Report: 1.5 week
+
 ### References
    1. [MNIS](http://yann.lecun.com/exdb/mnist/)
    2. [ImageNet & Tiny ImageNet](http://image-net.org)
