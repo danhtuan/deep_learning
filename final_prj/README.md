@@ -4,7 +4,13 @@
 * Advisor: Dr. Martin Hagan
 
 ## Project Proposal/Abstract
-In [1]
+### Problem and Motivation
+### Dataset
+### Deep Network
+### Framework
+### References
+### Performance Metrics
+### Estimated Schedule
 ## Project Report
 > Best is yet to come
 ## References
