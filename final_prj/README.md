@@ -22,9 +22,7 @@ To benchmarking between half-precision, single precision and double precision, I
  * Implementation: 1 week
  * Test/Debug: 1.5 week
  * Collect Data/Report: 1.5 week
-## Project Report
-> Best is yet to come
-## References
+### References
  1. [MNIS](http://yann.lecun.com/exdb/mnist/)
  2. [ImageNet & Tiny ImageNet](http://image-net.org)
  3. [The Street View House Numbers (SVHN) Dataset](http://ufldl.stanford.edu/housenumbers/)
