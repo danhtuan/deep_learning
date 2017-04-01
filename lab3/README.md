@@ -49,9 +49,17 @@ biases = tf.Variable(tf.zeros([200]), name="biases")
 TensorFlow programs use a tensor data structure to represent all data -- only tensors are passed between operations in the computation graph. Tensor can be thought as an n-dimensional array or list. A tensor has a static type, a rank, and a shape.
 
 ### 4. Explain how TensorFlow uses a dataflow graph to represent networks and operations. 
+We might think of TensorFlow Core programs as consisting of two discrete sections:
+ * Building the computational graph.
+ * Running the computational graph.
+
+TensorFlow is constructed around the basic idea of building and manipulating a computational graph, representing symbolically the numerical operations to be performed. TensorFlow can be seen as a library for numerical computation using data flow graphs. Think of a computational graph as a network of nodes, with each node known as an operation, running some function that can be as simple as addition or subtraction to as complex as some multi variate equation.
+ 
 
 ### 5. What are the nodes of the graph? What are the edges?
+The nodes in the graph represent mathematical operations, while the graph edges represent the multidimensional data arrays (tensors), which interconnect the nodes.
 
 ### 6. How do you run the graph?
+
 
 ## Code
