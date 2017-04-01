@@ -4,7 +4,7 @@
  * Dr. Martin Hagan
  
 ## Questions
-1. What are ”placeholders”, and how are they used? Give some examples.
+### 1. What are ”placeholders”, and how are they used? Give some examples.
 
 A `placeholder` is simply a variable that we will assign data to at a later date. It allows us to create our operations and build our computation graph, without needing the data. In TensorFlow terminology, we then feed data into the graph through these placeholders. Examples:
 
@@ -33,7 +33,7 @@ with tf.Session() as sess:
   print(sess.run(y, feed_dict={x: rand_array}))  # Will succeed.
 ```
 
-2. What are ”variables”, and how are they used?
+### 2. What are ”variables”, and how are they used?
 
 `Variables` are in-memory buffers containing tensors. We use variables to hold and update parameters (weights and bias, in specific). Here is an example from TensorFlow tutorial:
 
@@ -44,13 +44,13 @@ weights = tf.Variable(tf.random_normal([784, 200], stddev=0.35),
 biases = tf.Variable(tf.zeros([200]), name="biases")
 ```
 
-3. What are ”tensors” in TensorFlow?
+### 3. What are ”tensors” in TensorFlow?
 
 
-4. Explain how TensorFlow uses a dataflow graph to represent networks and operations. 
+### 4. Explain how TensorFlow uses a dataflow graph to represent networks and operations. 
 
-5. What are the nodes of the graph? What are the edges?
+### 5. What are the nodes of the graph? What are the edges?
 
-6. How do you run the graph?
+### 6. How do you run the graph?
 
 ## Code
