@@ -54,12 +54,24 @@ We might think of TensorFlow Core programs as consisting of two discrete section
  * Running the computational graph.
 
 TensorFlow is constructed around the basic idea of building and manipulating a computational graph, representing symbolically the numerical operations to be performed. TensorFlow can be seen as a library for numerical computation using data flow graphs. Think of a computational graph as a network of nodes, with each node known as an operation, running some function that can be as simple as addition or subtraction to as complex as some multi variate equation.
- 
+
+Here is an example that create a very simple graph that includes just three nodes:
+
+```python
+node1 = tf.constant(3.0, tf.float32)
+node2 = tf.constant(4.0) # also tf.float32 implicitly
+node3 = tf.add(node1, node2)
+```
 
 ### 5. What are the nodes of the graph? What are the edges?
 The nodes in the graph represent mathematical operations, while the graph edges represent the multidimensional data arrays (tensors), which interconnect the nodes.
 
 ### 6. How do you run the graph?
+To run the graph, we can use `tf.Session()` as following example:
 
+```python
+sess = tf.Session()
+print(sess.run(node3))
+```
 
 ## Code
