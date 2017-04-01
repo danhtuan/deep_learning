@@ -33,13 +33,23 @@ with tf.Session() as sess:
   print(sess.run(y, feed_dict={x: rand_array}))  # Will succeed.
 ```
 
-
-
 2. What are ”variables”, and how are they used?
+
+`Variables` are in-memory buffers containing tensors. We use variables to hold and update parameters (weights and bias, in specific). Here is an example from TensorFlow tutorial:
+
+```python
+# Create two variables.
+weights = tf.Variable(tf.random_normal([784, 200], stddev=0.35),
+                      name="weights")
+biases = tf.Variable(tf.zeros([200]), name="biases")
+```
 
 3. What are ”tensors” in TensorFlow?
 
-4. Explain how TensorFlow uses a dataflow graph to represent networks and operations. 5. What are the nodes of the graph? What are the edges?
+
+4. Explain how TensorFlow uses a dataflow graph to represent networks and operations. 
+
+5. What are the nodes of the graph? What are the edges?
 
 6. How do you run the graph?
 
