@@ -46,6 +46,7 @@ biases = tf.Variable(tf.zeros([200]), name="biases")
 
 ### 3. What are ”tensors” in TensorFlow?
 
+TensorFlow programs use a tensor data structure to represent all data -- only tensors are passed between operations in the computation graph. Tensor can be thought as an n-dimensional array or list. A tensor has a static type, a rank, and a shape.
 
 ### 4. Explain how TensorFlow uses a dataflow graph to represent networks and operations. 
 
