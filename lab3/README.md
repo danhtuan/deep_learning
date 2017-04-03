@@ -75,3 +75,45 @@ print(sess.run(node3))
 ```
 
 ## Code
+### Explain one_layer.
+```python
+W = tf.Variable([.3], tf.float32)
+b = tf.Variable([-.3], tf.float32)
+x = tf.placeholder(tf.float32)
+linear_model = W * x + b
+```
+--> Create a linear model with 2 parameters W, b and 1 variable x
+```python
+init = tf.initialize_all_variables()
+sess = tf.Session()
+sess.run(init)
+print(sess.run(linear_model, {x:[1,2,3,4]}))
+```
+--> Run the model with init values
+```python
+y = tf.placeholder(tf.float32)
+squared_deltas = tf.square(linear_model - y)
+loss = tf.reduce_sum(squared_deltas)
+print(sess.run(loss, {x:[1,2,3,4], y:[0,-1,-2,-3]}))
+fixW = tf.assign(W, [-1.])
+fixb = tf.assign(b, [1.])
+sess.run([fixW, fixb])
+print(sess.run(loss, {x:[1,2,3,4], y:[0,-1,-2,-3]}))
+```
+--> Run the model, compare with target y and compute the lost then assign W, b with correct value
+```python
+optimizer = tf.train.GradientDescentOptimizer(0.01)
+train = optimizer.minimize(loss)
+
+sess.run(init) # reset values to incorrect defaults.
+for i in range(1000):
+  sess.run(train, {x:[1,2,3,4], y:[0,-1,-2,-3]})
+```
+--> Reset model, then train the model using Gradient Descent Optimizer with 1000 epoches
+```
+y([-0.9999969], dtype=float32), array([ 0.99999082], dtype=float32)]
+```
+--> The trained model have W and b are very close to the correct one (1, -1) above
+
+
+
