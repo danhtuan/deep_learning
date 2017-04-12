@@ -80,4 +80,7 @@ Epoch: 13 Train Perplexity: 19.180
 Epoch: 13 Valid Perplexity: 152.214
 Test Perplexity: 145.104
 ```
-
+Comparing three networks:
+ * 3 layers has higher perplexity (in all train, valid and test sets) than 2 layers, so increaseing the layers doesn't help
+ * 2 layers and 400 units seems to be overfitting because the train perplexity is so good while the valid and test is much higher than others
+ * 3 layers speed is the best while 2 layers and 200 units per layer is worst
