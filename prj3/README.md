@@ -56,11 +56,28 @@ With `3 layers`:
 0.404 perplexity: 49.814 speed: 9913 wps
 0.504 perplexity: 49.199 speed: 9915 wps
 0.604 perplexity: 47.664 speed: 9916 wps
-0.703 perplexity: 47.055 speed: 9916 wps 0.803 perplexity: 46.383 speed: 9916 wps
+0.703 perplexity: 47.055 speed: 9916 wps 
+0.803 perplexity: 46.383 speed: 9916 wps
 0.903 perplexity: 44.895 speed: 9916 wps
 Epoch: 13 Train Perplexity: 43.988     
 Epoch: 13 Valid Perplexity: 123.126   
 Test Perplexity: 118.102
 ```
 With `2 layers and 400 units per layer`:
+
+```
+0.004 perplexity: 33.633 speed: 9466 wps
+0.104 perplexity: 24.162 speed: 9995 wps
+0.204 perplexity: 26.218 speed: 10005 wps
+0.304 perplexity: 24.816 speed: 10010 wps
+0.404 perplexity: 24.051 speed: 10014 wps
+0.504 perplexity: 23.336 speed: 10015 wps
+0.604 perplexity: 22.242 speed: 10016 wps
+0.703 perplexity: 21.578 speed: 10017 wps
+0.803 perplexity: 20.871 speed: 10018 wps
+0.903 perplexity: 19.849 speed: 10019 wps
+Epoch: 13 Train Perplexity: 19.180
+Epoch: 13 Valid Perplexity: 152.214
+Test Perplexity: 145.104
+```
 
