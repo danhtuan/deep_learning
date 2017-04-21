@@ -3,7 +3,7 @@
  * Deep Learning Spring 2017
  * Dr. Martin Hagan
  
-## Questions
+## A.Questions
 ### 1. What are ”placeholders”, and how are they used? Give some examples.
 
 A `placeholder` is simply a variable that we will assign data to at a later date. It allows us to create our operations and build our computation graph, without needing the data. In TensorFlow terminology, we then feed data into the graph through these placeholders. Examples:
@@ -74,8 +74,8 @@ sess = tf.Session()
 print(sess.run(node3))
 ```
 
-## Code
-### Explain one_layer.
+## B.Code
+### 1. Explain one_layer.py
 ```python
 W = tf.Variable([.3], tf.float32)
 b = tf.Variable([-.3], tf.float32)
@@ -113,7 +113,52 @@ for i in range(1000):
 ```
 y([-0.9999969], dtype=float32), array([ 0.99999082], dtype=float32)]
 ```
---> The trained model have W and b are very close to the correct one (1, -1) above
+--> The trained model have W and b are very close to the correct one (-1, 1) above
 
+### 2. Modify to solve HW3
+### 3. Explain count.py
+```python
+train_input = ['{0:015b}'.format(i) for i in range(2 ** 15)]
+shuffle(train_input)
+train_input = [map(int, i) for i in train_input]
+ti = []
+for i in train_input:
+    temp_list = []
+    for j in i:
+        temp_list.append([j])
+    ti.append(np.array(temp_list))
+train_input = ti
 
+train_output = []
 
+for i in train_input:
+    count = 0
+    for j in i:
+        if j[0] == 1:
+            count += 1
+    temp_list = ([0] * 16)
+    temp_list[count] = 1
+    train_output.append(temp_list)
+
+NUM_EXAMPLES = 10000
+test_input = train_input[NUM_EXAMPLES:]
+test_output = train_output[NUM_EXAMPLES:]  # everything beyond 10,000
+
+train_input = train_input[:NUM_EXAMPLES]
+train_output = train_output[:NUM_EXAMPLES]  # till 10,000
+```
+--> This code create a dataset of 2^15 points then divide it into two sets:
+ * Training dataset: 10000 points
+ * Test set: the rest
+
+```
+Epoch 500 error 0.2%
+[[  2.08623234e-08   5.41389156e-10   3.66248004e-11   4.04669942e-09
+    1.67097426e-07   7.02460952e-08   4.77521489e-08   6.69241535e-06
+    3.15301027e-03   9.96461332e-01   3.78547993e-04   3.23926024e-08
+    1.59584594e-08   1.02191908e-10   1.67648491e-08   9.09400022e-09]]
+[[  4.47081157e-11   8.38611038e-12   1.21016919e-10   1.33419387e-09
+    1.12379425e-07   5.13746694e-04   9.99075174e-01   4.07108018e-04
+    6.65679345e-10   7.18384033e-11   3.69486656e-06   3.31567218e-10
+    9.76393767e-15   2.08210730e-16   2.20294334e-12   5.55894246e-08]]
+```
