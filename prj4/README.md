@@ -160,4 +160,9 @@ To speed up the network to make comparison, I decreased the epoch even smaller.
 283              dataset='mnist.pkl.gz', batch_size=10)
 ```
 
-
+The experimental results which compare the performance of network over the number of neurons(1000,500,2000)
+| #Neurons | Pre-train Time(m) | Fine Tuning Time | Validation Score | Test Performance |
+|----------|-------------------|------------------|------------------|------------------|
+| 1000     | 2.52              | 16.52            | 1.91             | 2.07             |
+| 500      |                   |                  |                  |                  |
+|          |                   |                  |                  |                  |
