@@ -120,7 +120,7 @@ Wall time:    4944.26 s.
 
 It took 27 minutes to finish the pre-training phases and around 55 minutes to train the network. The test performance is 1.6% and the best validation score is 1.72% (error rate). 
 ## How is performance being measured in this network
-In the code, it used the validation/test loss, which are the mean of the loss taken all over the validation set and test set.
+Besides of the time, in the code, it used the validation/test loss, which are the mean of the loss taken all over the validation set and test set.
 
 ```python
 393                 validation_losses = validate_model()
