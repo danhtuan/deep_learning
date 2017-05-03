@@ -102,7 +102,8 @@ epoch 36, minibatch 5000/5000, validation error 1.770000 %
 epoch 37, minibatch 5000/5000, validation error 1.780000 %
 epoch 38, minibatch 5000/5000, validation error 1.760000 %
 epoch 39, minibatch 5000/5000, validation error 1.760000 %
-Optimization complete with best validation score of 1.720000 %, obtained at iteration 100000, with test performance 1.600000 %
+Optimization complete with best validation score of 1.720000 %, 
+obtained at iteration 100000, with test performance 1.600000 %
 The fine tuning code for file DBN.py ran for 54.84m
 
 IPython CPU timings (estimated):
@@ -110,4 +111,6 @@ IPython CPU timings (estimated):
   System :     895.24 s.
 Wall time:    4944.26 s.
 ```
+
+It took 27 minutes to finish the pre-training phases and around 55 minutes to train the network. The test performance is 1.6% and the best validation score is 1.72% (error rate). 
 ## How is performance being measured in this network
