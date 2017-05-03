@@ -126,8 +126,8 @@ In the code, it used the validation/test loss, which are the mean of the loss ta
 393                 validation_losses = validate_model()
 394                 this_validation_loss = numpy.mean(validation_losses, dtype='float64')
 ...
-16                     test_losses = test_model()
-417                     test_score = numpy.mean(test_losses, dtype='float64')
+16                  test_losses = test_model()
+417                 test_score = numpy.mean(test_losses, dtype='float64')
 ```
 
 The single loss is the log likelihood of the logistic regression (output) layer.
@@ -142,3 +142,11 @@ The single loss is the log likelihood of the logistic regression (output) layer.
 141         self.errors = self.logLayer.errors(self.y)
 ```
 
+## Number of Layers/Neurons
+There are 3 RBM layers are being used in the network. The code to construct the DBN:
+
+```python
+318     dbn = DBN(numpy_rng=numpy_rng, n_ins=28 * 28,
+319               hidden_layers_sizes=[1000, 1000, 1000],
+320               n_outs=10)
+````
