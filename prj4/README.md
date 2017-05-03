@@ -172,3 +172,18 @@ For the pre-train time, the best is 500 (which is reasonable) while the worst is
 For the Validation Score, increasing the number of neurons from 500 to 1000 help reduce the validation score from 2.12 to 1.91 but 1500 does not help much and it is even worse than 1000.
 For the Test Performance, it is amazing to see 500 is the best and 1000 is the worst. My best guess is 1000 and 1500 are kind of overfitting.
 
+## Minibatches
+
+```python
+281  def test_DBN(finetune_lr=0.1, pretraining_epochs=2,
+282              pretrain_lr=0.01, k=1, training_epochs=20,
+283              dataset='mnist.pkl.gz', batch_size=10)
+```
+Currently, the code set `batch_size = 10`. To do experiments over batch_size, I set the number of neurons for each layer equals to 500. The results are shown on Table as following:
+
+|Batch_size | Pre-train Time(m) | Fine Tuning Time | Validation Score | Test Performance |
+|----------|-------------------|------------------|------------------|------------------|
+| 1     | 1.89              | 9.75             | 2.02             | 1.89             |
+| 5     | 2.52              | 16.52            | 1.91             | 2.07             |
+| 10      | 1.40              | 7.69             | 2.12             | 1.83             |
+| 20      | 1.40              | 7.69             | 2.12             | 1.83             |
