@@ -149,4 +149,6 @@ There are 3 RBM layers are being used in the network. The code to construct the 
 318     dbn = DBN(numpy_rng=numpy_rng, n_ins=28 * 28,
 319               hidden_layers_sizes=[1000, 1000, 1000],
 320               n_outs=10)
-````
+```
+The number of layers equals to the size of hidden_layers_sizes array. Also from the code above, the number of neurons in each layers are 1000.
+
