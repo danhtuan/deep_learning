@@ -120,3 +120,25 @@ Wall time:    4944.26 s.
 
 It took 27 minutes to finish the pre-training phases and around 55 minutes to train the network. The test performance is 1.6% and the best validation score is 1.72% (error rate). 
 ## How is performance being measured in this network
+In the code, it used the validation/test loss, which are the mean of the loss taken all over the validation set and test set.
+
+```python
+393                 validation_losses = validate_model()
+394                 this_validation_loss = numpy.mean(validation_losses, dtype='float64')
+...
+16                     test_losses = test_model()
+417                     test_score = numpy.mean(test_losses, dtype='float64')
+```
+
+The single loss is the log likelihood of the logistic regression (output) layer.
+```python
+134         # compute the cost for second phase of training, defined as the
+135         # negative log likelihood of the logistic regression (output) layer
+136         self.finetune_cost = self.logLayer.negative_log_likelihood(self.y)
+137 
+138         # compute the gradients with respect to the model parameters
+139         # symbolic variable that points to the number of errors made on the
+140         # minibatch given by self.x and self.y
+141         self.errors = self.logLayer.errors(self.y)
+```
+
