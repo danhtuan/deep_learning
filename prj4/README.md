@@ -6,8 +6,8 @@
 ## Run the program DBN.py and investigate and verify its performance
 The program seemed to run forever with default epoch parameters. Looked at DBN tutorial, it said that 
 ```
-On an Intel(R) Xeon(R) CPU X5560 running at 2.80GHz, using a multi-threaded MKL library (running on 4 cores), 
-pretraining took 615 minutes with an average of 2.05 mins/(layer * epoch). 
+On an Intel(R) Xeon(R) CPU X5560 running at 2.80GHz, using a multi-threaded MKL library 
+(running on 4 cores), pretraining took 615 minutes with an average of 2.05 mins/(layer * epoch). 
 Fine-tuning took only 101 minutes or approximately 2.20 mins/epoch.
 ```
 To observe how it works, I have changed the number of pre-training epoch from 100-->10 and number of training epoch from 1000-->100. Here is the output from console: 
