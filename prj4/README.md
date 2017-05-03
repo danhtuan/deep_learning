@@ -143,12 +143,21 @@ The single loss is the log likelihood of the logistic regression (output) layer.
 ```
 
 ## Number of Layers/Neurons
-There are 3 RBM layers are being used in the network. The code to construct the DBN:
+The code to construct the DBN:
 
 ```python
 318     dbn = DBN(numpy_rng=numpy_rng, n_ins=28 * 28,
 319               hidden_layers_sizes=[1000, 1000, 1000],
 320               n_outs=10)
 ```
-The number of layers equals to the size of hidden_layers_sizes array. Also from the code above, the number of neurons in each layers are 1000.
+There are 3 RBM layers are being used in the network. The number of layers equals to the size of hidden_layers_sizes array. Also from the code above, the number of neurons in each layers are 1000.
+
+To speed up the network to make comparison, I decreased the epoch even smaller. 
+
+```python
+281  def test_DBN(finetune_lr=0.1, pretraining_epochs=2,
+282              pretrain_lr=0.01, k=1, training_epochs=20,
+283              dataset='mnist.pkl.gz', batch_size=10)
+```
+
 
