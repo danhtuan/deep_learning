@@ -188,3 +188,8 @@ Currently, the code set `batch_size = 10`. To do experiments over batch_size, I 
 | 10       | 1.40              | 7.69             | 2.12             | 1.83             |
 | 20       | 0.73             | 4.01             | 2.40             | 2.26             |
 | 40      | 0.4             | 2.13             | 2.69             | 2.90             |
+| 1000      | 0.14             | 0.55             | 10.04             | 10.43             |
+
+As shown in the Table, increasing the batch size:
+  * Faster Pre-train and Fine Tuning Time
+  * Lower Validation Score and Test Score
