@@ -16,6 +16,12 @@ The rest of report is oraganized as following: Section 2 is a very short introdu
 ## 2. Floating Point Formats
 ### 2.1 IEEE 754 Floating Point Formats
 
+<img src="ieee_fp.png" alt="fp" width="600" height="200"/>
+
+In this project, three IEEE 754-2008 floating point formats are used in training DNN: half-precision (float16), single-precision (float32), and double-precision (float64) floating point formats. Basically, a floating point format includes three components: sign, exponent and significant/mantissa. The bit-width for each component in each format as well as the formula to compute the value is shown in above figure.
+
+In comparison with fixed-point numbers, the floating point numbers have a much wider range (due to exponent component). As a result, floating point numbers are suitable for scientific computation and a wide range of applications. For many years, float32 and float64 have been widely used as the default formats for DNN. Recently, float16 is emerging as another option for DNN. Compared to float32 and float64, float16 has much shorter bitwidth and therefore, it is able to offer a significant speed-up and power savings.
+
 ### 2.2 An experiment on a combined IEEE compliant float16-float32 hardware
 
 ## 3. Datasets
