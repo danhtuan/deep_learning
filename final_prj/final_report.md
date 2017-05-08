@@ -18,9 +18,14 @@ The rest of report is oraganized as following: Section 2 is a very short introdu
 
 ## 3. Datasets
 
-### 3.1 MNIST Dataset
-### 3.2 CIFAR-10
+### 3.1 MNIST Dataset []
 
+The MNIST dataset consists of handwritten digit images and it is divided in 60,000 examples for the training set and 10,000 examples for testing. In many papers as well as in this tutorial, the official training set of 60,000 is divided into an actual training set of 50,000 examples and 10,000 validation examples (for selecting hyper-parameters like learning rate and size of the model). All digit images have been size-normalized and centered in a fixed size image of 28 x 28 pixels. 
+
+Here are some examples of MNIST digits:
+
+
+### 3.2 CIFAR-10 Dataset []
 The CIFAR-10 dataset consists of 60000 32x32 color images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images. 
 
 The dataset is divided into five training batches and one test batch, each with 10000 images. The test batch contains exactly 1000 randomly-selected images from each class. The training batches contain the remaining images in random order, but some training batches may contain more images from one class than another. Between them, the training batches contain exactly 5000 images from each class. 
