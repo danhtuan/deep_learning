@@ -23,7 +23,7 @@ The rest of report is oraganized as following: Section 2 is a very short introdu
 The MNIST dataset consists of handwritten digit images and it is divided in 60,000 examples for the training set and 10,000 examples for testing. In many papers as well as in this tutorial, the official training set of 60,000 is divided into an actual training set of 50,000 examples and 10,000 validation examples (for selecting hyper-parameters like learning rate and size of the model). All digit images have been size-normalized and centered in a fixed size image of 28 x 28 pixels. 
 
 Here are some examples of MNIST digits:
-
+<img src="mnist.png" alt="cifar10" width="500" height="400"/>	
 
 ### 3.2 CIFAR-10 Dataset []
 The CIFAR-10 dataset consists of 60000 32x32 color images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images. 
