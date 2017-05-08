@@ -1,4 +1,5 @@
-# Final Report
+# Final Project Report
+# Training Convolutional Neural Network using different floating point formats
   * Tuan Nguyen
   * Deep Learning Spring 2017
   * Dr. Martin Hagan
