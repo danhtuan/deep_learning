@@ -27,7 +27,7 @@ The dataset is divided into five training batches and one test batch, each with 
 
 Here are the classes in the dataset, as well as 10 random images from each:
 
-<img src="cifar10.png" alt="cifar10" style="width: 100px;"/>			
+<img src="cifar10.png" alt="cifar10" width="500" height="400"/>			
 
 The classes are completely mutually exclusive. There is no overlap between automobiles and trucks. "Automobile" includes sedans, SUVs, things of that sort. "Truck" includes only big trucks. Neither includes pickup trucks.
 
