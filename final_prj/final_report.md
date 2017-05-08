@@ -14,7 +14,9 @@ This project is a small research to examine how different floating-point precisi
 
 The rest of report is oraganized as following: Section 2 is a very short introduction to Floating Point Formats used in this research. Section 3 is a description about MNIST and CIFAR-10 datasets and Section 4 describes about Convolutional Neural Network design. Section 5 shortly describes about the hardware/software configuration in the experiment and results will be shown in Section 6. The final section is a short conclusion.
 ## 2. Floating Point Formats
+### 2.1 IEEE 754 Floating Point Formats
 
+### 2.2 An experiment on a combined IEEE compliant float16-float32 hardware
 
 ## 3. Datasets
 
@@ -23,6 +25,7 @@ The rest of report is oraganized as following: Section 2 is a very short introdu
 The MNIST dataset consists of handwritten digit images and it is divided in 60,000 examples for the training set and 10,000 examples for testing. In many papers as well as in this tutorial, the official training set of 60,000 is divided into an actual training set of 50,000 examples and 10,000 validation examples (for selecting hyper-parameters like learning rate and size of the model). All digit images have been size-normalized and centered in a fixed size image of 28 x 28 pixels. 
 
 Here are some examples of MNIST digits:
+
 <img src="mnist.png" alt="cifar10" width="500" height="400"/>	
 
 ### 3.2 CIFAR-10 Dataset []
