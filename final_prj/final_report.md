@@ -30,6 +30,8 @@ The proposed multipliers is implemented in RTL-compliant Verilog and then synthe
 
 <img src="fp_cb.png" alt="fp_cb" width="800" height="200"/>
 
+This research triggered my curiosity about using low-precision numbers in DNN and led to this project. A huge savings in power and computation can be archieved if float16 (or even lower formats such as 8 bits integer (INT8)) can be safely used in DNN.
+
 ## 3. Datasets
 
 ### 3.1 MNIST Dataset []
