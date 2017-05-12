@@ -68,7 +68,10 @@ The classes are completely mutually exclusive. There is no overlap between autom
 
 ## 6. Experimental Results
 ### 6.1 Accuracy
+The validation score and test score, computed by percent of error rate, for both MNIST and CIFAR  has been shown in the Table below.
 <img src="accuracy.png" alt="accuracy" width="600" height="150"/>	
+As shown, float16 has little to no impact on accuracy of DNN. In some cases, the float16's accuracy is even higher than the float32 and float64 formats. However, the difference is too small to be considered an improvement. 
+
 
 ### 6.2 Peak Memory
 <img src="mem.png" alt="mem" width="600" height="150"/>	
