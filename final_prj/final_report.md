@@ -82,7 +82,14 @@ The peak memory in KB has been reported sing memory profiler and shown in below 
 From the Table, GPU peak memory is much higher than CPU peak memory. In addition, in GPU, the peak memory of float16 is exactly a half of float32 and one fourth of float64, which match with the bidth-width ratio between them. 
 
 ### 6.3 Speed
+Below Tablle shows the total running time of training and runing network. Besides,a profiler was used to monitor the percent of CPU time, GPU time and Transfer time in total time.
+
 <img src="speed.png" alt="cifar10" width="600" height="150"/>	
+
+As shown in Table, the GPU Time is much higher than CPU, which indicates that in DNN, GPU does most of the dirty work. We also see that float64 is 3 to 4 times slower compared to float32. 
+
+However, float16 is expected to be faster than float32 but in Table, we see that float16 is a little bit slower than float32.
+
 <img src="cnv.png" alt="cnv" width="800" height="100"/>	
 <img src="profile.png" alt="profile" width="800" height="300"/>	
 
