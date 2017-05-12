@@ -68,8 +68,8 @@ The classes are completely mutually exclusive. There is no overlap between autom
 <img src="mem.png" alt="mem" width="600" height="200"/>	
 ### 6.3 Speed
 <img src="speed.png" alt="cifar10" width="600" height="200"/>	
-<img src="cnv.png" alt="cnv" width="600" height="150"/>	
-<img src="profile.png" alt="profile" width="600" height="400"/>	
+<img src="cnv.png" alt="cnv" width="800" height="100"/>	
+<img src="profile.png" alt="profile" width="800" height="300"/>	
 ## 7. Conclusion
 
 ## Reference
