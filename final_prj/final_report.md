@@ -107,6 +107,8 @@ The top three operations are all convolutions and account for 80% computation of
 
 ## 7. Conclusion
 
+This project is another attempt to show that in many cases as in CNN, the float16 has little to no impact on accuracy of the network while it offers 50% saving in memory and significantly saving in power dissipation. The project also shows that very high precision such as float64 is not necessary because of 3-4 times slower speed and no improvments in accuracy. Another contribution of this project is to show that convolution acccounts for around 80% of computation of CNN and an improvment in this operation can have high impact on CNN performance.
+
 ## Reference
 
 [1]: Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. Deep learning. MIT Press, 2016.
