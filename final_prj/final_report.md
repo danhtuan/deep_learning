@@ -57,16 +57,28 @@ The classes are completely mutually exclusive. There is no overlap between autom
   
 
 ## 5. Experimental Setup
-This project utilized a simplified variation of LeNet5 Convolutional Neural Network that is based on DeepLearning.Net code. The configuration for each dataset is shown in below sections.
+This project utilized a simplified variation of LeNet5 Convolutional Neural Network that is based on [8]. The configuration for each dataset is shown in below sections.
 ### 5.1 Convolutional Neural Network for MNIST
-
-
 <img src="cnv_mnist.png" alt="cnv_mnist" width="250" height="300"/>
-
+ * 4 core layers as been shown in Figure
+ * Cost function: negative_log_likelihood
+ * Early-stopping
+ * Batch-size = 500
+ * Number of epochs = 200
+ * Learning Rate = 0.1
+ * Max_Pooling = (2,2)
 
 ### 5.2 Convolutional Neural Network for CIFAR-10
+
 <img src="cnv_cifar.png" alt="cnv_cifar10" width="250" height="300"/>
 
+ * 4 core layers as been shown in Figure
+ * Cost function: negative_log_likelihood
+ * Early-stopping
+ * Batch-size = 500
+ * Number of epochs = 200
+ * Learning Rate = 0.01
+ * Max_Pooling = (2,2)
 ### 5.3 Hardwares/Softwares
  * Hardwares: The experiment has been done on a PC with Intel(R) Core (TM) i7-4790 @ 3.6 GHz (Quad) coupled with GPU Nvidia GeForce GTX Titan Black 6GB.
  * Softwares: the CNN program has been written in Python based on Theano 9.0 library. Two additional libraries were also installed to support for float16: libgpuarray and pygpu. To do computation/memory profiler, psutil and iPython were also installed.
@@ -125,4 +137,6 @@ This project is another attempt to show that in many cases as in CNN, the float1
 [6]: https://standards.ieee.org/findstds/standard/754-2008.html
 
 [7]: Tuan Nguyen, James E. Stine. "A combined IEEE 754 compliant half-precision and single-precision floating point multipliers for Deep Learning." Asilomar 2017 (Submitted).
+
+[8]: http://deeplearning.net/tutorial/lenet.html
 
