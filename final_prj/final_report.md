@@ -88,10 +88,16 @@ Below Tablle shows the total running time of training and runing network. Beside
 
 As shown in Table, the GPU Time is much higher than CPU, which indicates that in DNN, GPU does most of the dirty work. We also see that float64 is 3 to 4 times slower compared to float32. 
 
-However, float16 is expected to be faster than float32 but in Table, we see that float16 is a little bit slower than float32.
+However, float16 is expected to be faster than float32 but in Table, we see that float16 is a little bit slower than float32. The reason for that is shown in the logging message below:
 
 <img src="cnv.png" alt="cnv" width="800" height="100"/>	
+
+While doing convoltion, even the input data type is float16, the Theano back-end convolution still applies float32 precision to compute the numbers. As a result, a 2 direction conversion has been used to convert float16 inputs to float32 inputs before doing convolution and another conversion has been used to convert float32 results to float16 results. This is because Theano has still not fully supported float16 computation in convotion operations (conv2d).
+
+Another profiler was used to measure the frequency of convolution operations in DNN and the results shown in below Table.
 <img src="profile.png" alt="profile" width="800" height="300"/>	
+
+The top three operations are all convolutions and account for 80 percent computation of CNN.
 
 ## 7. Conclusion
 
