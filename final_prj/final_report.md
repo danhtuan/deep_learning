@@ -6,7 +6,7 @@
   
 ## 1. Introduction
 
-In recent years, Deep Learning or Deep Neural Network (DNN) has grown tremendously in its popularity and usefulness []. However, DNN is computationally intensive, power-hungry and very often limited by hardware capability. For many years, single-precision (float32) and double-precision (float64) floating point formats have been widely used as the default formats for DNN. 
+In recent years, Deep Learning or Deep Neural Network (DNN) has grown tremendously in its popularity and usefulness [1]. However, DNN is computationally intensive, power-hungry and very often limited by hardware capability. For many years, single-precision (float32) and double-precision (float64) floating point formats have been widely used as the default formats for DNN. 
 
 However, using lower precision is growing rapidly as a trend in DNN research. Recent research [][][] shows that low-precision and very low precision are sufficient for training and running DNN. In addition, in 2016, NVIDIA introduced Pascal GPU architecture and CUDA 8 SDK that fully support half-precision (float16) floating point format and mixed-precision computing. The lower memory, higher speed, and less power consumption are main motivations behind this trending. 
 
@@ -63,3 +63,4 @@ The classes are completely mutually exclusive. There is no overlap between autom
 ## 7. Conclusion
 
 ## Reference
+[1]: Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. Deep learning. MIT Press, 2016.
