@@ -57,8 +57,12 @@ The classes are completely mutually exclusive. There is no overlap between autom
 
 
 ## 5. Experimental Setup
-### 5.1 Convolutional Neural Network for MNIS
+### 5.1 Convolutional Neural Network for MNIST
+
+<img src="cnv_mnist.png" alt="cnv_mnist" width="250" height="300"/>
+
 ### 5.2 Convolutional Neural Network for CIFAR-10
+<img src="cnv_cifar.png" alt="cnv_cifar10" width="250" height="300"/>
 ### 5.3 Hardwares/Softwares
 
 ## 6. Experimental Results
