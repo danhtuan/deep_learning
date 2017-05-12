@@ -97,7 +97,7 @@ While doing convoltion, even the input data type is float16, the Theano back-end
 Another profiler was used to measure the frequency of convolution operations in DNN and the results shown in below Table.
 <img src="profile.png" alt="profile" width="800" height="300"/>	
 
-The top three operations are all convolutions and account for 80 percent computation of CNN.
+The top three operations are all convolutions and account for 80 percent computation of CNN. This number agrees with a research from MIT which showed that 90% computation of CNN is due to convolution operations.
 
 ## 7. Conclusion
 
