@@ -65,6 +65,8 @@ The classes are completely mutually exclusive. There is no overlap between autom
 <img src="cnv_cifar.png" alt="cnv_cifar10" width="250" height="300"/>
 
 ### 5.3 Hardwares/Softwares
+ * Hardwares: The experiment has been done on a PC with Intel(R) Core (TM) i7-4790 @ 3.6 GHz (Quad) coupled with GPU Nvidia GeForce GTX Titan Black 6GB.
+ * Softwares: the CNN program has been written in Python based on Theano 9.0 library. Two additional libraries were also installed to support for float16: libgpuarray and pygpu. To do computation/memory profiler, psutil and iPython were also installed.
 
 ## 6. Experimental Results
 ### 6.1 Accuracy
@@ -97,7 +99,7 @@ While doing convoltion, even the input data type is float16, the Theano back-end
 Another profiler was used to measure the frequency of convolution operations in DNN and the results shown in below Table.
 <img src="profile.png" alt="profile" width="800" height="300"/>	
 
-The top three operations are all convolutions and account for 80 percent computation of CNN. This number agrees with a research from MIT which showed that 90% computation of CNN is due to convolution operations.
+The top three operations are all convolutions and account for 80% computation of CNN. This number agrees with a research from MIT which showed that 90% computation of CNN is due to convolution operations.
 
 ## 7. Conclusion
 
