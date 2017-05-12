@@ -57,10 +57,17 @@ The classes are completely mutually exclusive. There is no overlap between autom
   
 
 ## 5. Experimental Setup
-This project utilized a simplified variation of LeNet5 Convolutional Neural Network that is based on [8]. The configuration for each dataset is shown in below sections.
-### 5.1 Convolutional Neural Network for MNIST
+This project utilized a simplified variation of LeNet5 Convolutional Neural Network that is based on [8]. This implementation includes 4 core layers as shown in figure:
+ 
+ * Convolution Layer - Max-pooling: 20 kernels (5x5)
+ * Convolution Layer - Max-pooling: 50 kernals (5x5)
+ * Fully-connected Layer
+ * Logistic-Regression Layer
+ 
 <img src="cnv_mnist.png" alt="cnv_mnist" width="250" height="300"/>
- * 4 core layers as been shown in Figure
+
+Other configurations are:
+
  * Cost function: negative_log_likelihood
  * Early-stopping
  * Batch-size = 500
@@ -68,17 +75,6 @@ This project utilized a simplified variation of LeNet5 Convolutional Neural Netw
  * Learning Rate = 0.1
  * Max_Pooling = (2,2)
 
-### 5.2 Convolutional Neural Network for CIFAR-10
-
-<img src="cnv_cifar.png" alt="cnv_cifar10" width="250" height="300"/>
-
- * 4 core layers as been shown in Figure
- * Cost function: negative_log_likelihood
- * Early-stopping
- * Batch-size = 500
- * Number of epochs = 200
- * Learning Rate = 0.01
- * Max_Pooling = (2,2)
 ### 5.3 Hardwares/Softwares
  * Hardwares: The experiment has been done on a PC with Intel(R) Core (TM) i7-4790 @ 3.6 GHz (Quad) coupled with GPU Nvidia GeForce GTX Titan Black 6GB.
  * Softwares: the CNN program has been written in Python based on Theano 9.0 library. Two additional libraries were also installed to support for float16: libgpuarray and pygpu. To do computation/memory profiler, psutil and iPython were also installed.
