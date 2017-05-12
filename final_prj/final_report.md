@@ -63,13 +63,13 @@ The classes are completely mutually exclusive. There is no overlap between autom
 
 ## 6. Experimental Results
 ### 6.1 Accuracy
-<img src="accuracy.png" alt="accuracy" width="800" height="400"/>	dfdfd
+<img src="accuracy.png" alt="accuracy" width="600" height="200"/>	
 ### 6.2 Peak Memory
-<img src="mem.png" alt="mem" width="500" height="400"/>	
+<img src="mem.png" alt="mem" width="600" height="200"/>	
 ### 6.3 Speed
-<img src="speed.png" alt="cifar10" width="500" height="400"/>	
-<img src="cnv.png" alt="cnv" width="500" height="400"/>	
-<img src="profile.png" alt="profile" width="500" height="400"/>	
+<img src="speed.png" alt="cifar10" width="600" height="200"/>	
+<img src="cnv.png" alt="cnv" width="600" height="150"/>	
+<img src="profile.png" alt="profile" width="600" height="400"/>	
 ## 7. Conclusion
 
 ## Reference
