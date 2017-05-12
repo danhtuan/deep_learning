@@ -55,11 +55,19 @@ The classes are completely mutually exclusive. There is no overlap between autom
 
 ## 4. Convolutional Neural Network
 
-## 5. Experimental Setup
 
+## 5. Experimental Setup
+### 5.1 Convolutional Neural Network for MNIS
+### 5.2 Convolutional Neural Network for CIFAR-10
+### 5.3 Hardwares/Softwares
 
 ## 6. Experimental Results
-
+### 6.1 Accuracy
+<img src="cifar10.png" alt="cifar10" width="500" height="400"/>	
+### 6.2 Peak Memory
+<img src="cifar10.png" alt="cifar10" width="500" height="400"/>	
+### 6.3 Speed
+<img src="cifar10.png" alt="cifar10" width="500" height="400"/>	
 ## 7. Conclusion
 
 ## Reference
