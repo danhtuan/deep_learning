@@ -63,6 +63,7 @@ The classes are completely mutually exclusive. There is no overlap between autom
 ## 7. Conclusion
 
 ## Reference
+
 [1]:Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. Deep learning. MIT Press, 2016.
 
 [2]:Courbariaux, Matthieu, Yoshua Bengio, and Jean-Pierre David. "Training deep neural networks with low precision multiplications." arXiv preprint arXiv:1412.7024 (2014).
