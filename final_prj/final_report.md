@@ -54,7 +54,12 @@ Here are the classes in the dataset, as well as 10 random images from each:
 The classes are completely mutually exclusive. There is no overlap between automobiles and trucks. "Automobile" includes sedans, SUVs, things of that sort. "Truck" includes only big trucks. Neither includes pickup trucks.
 
 ## 4. Convolutional Neural Network
-  
+In this project, image classification using convolutional neural network was selected as the benchmark for different floating point formats. Basically, a CNN [10] is a multilayer feedforward network that has 2 or 3 dimensional inputs. The core layer type for CNN is the convolution layer that based on convolution operation. A pooling (or subsampling) layer often follows a convolutiona layer to reduce the spatial size of the feature map, which is the output of the convolution. A typical configuration of a CNN includes many convolution, max-pooling, fully-connected and softmax and/or logistic regression layers stacked together as below Figure:
+
+
+<img src="cnn_diagram.png" alt="cnv_mnist" width="600" height="200"/>
+
+
 
 ## 5. Experimental Setup
 This project utilized a simplified variation of LeNet5 Convolutional Neural Network that is based on [8]. This implementation includes 4 core layers as shown in figure:
@@ -72,7 +77,7 @@ Other configurations are:
  * Early-stopping
  * Batch-size = 500
  * Number of epochs = 200
- * Learning Rate = 0.1
+ * Learning Rate = 0.1 (MNIST) and Learning Rate = 0.01 (CIFAR-10)
  * Max_Pooling = (2,2)
 
 ### 5.3 Hardwares/Softwares
@@ -136,3 +141,4 @@ This project is another attempt to show that in many cases as in CNN, the float1
 
 [8]: http://deeplearning.net/tutorial/lenet.html
 
+[10]: Martin Hagan. Deep Learning slides. Spring 2017 
