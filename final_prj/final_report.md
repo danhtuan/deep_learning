@@ -68,13 +68,18 @@ The classes are completely mutually exclusive. There is no overlap between autom
 
 ## 6. Experimental Results
 ### 6.1 Accuracy
-The validation score and test score, computed by percent of error rate, for both MNIST and CIFAR  has been shown in the Table below.
-<img src="accuracy.png" alt="accuracy" width="600" height="150"/>	
-As shown, float16 has little to no impact on accuracy of DNN. In some cases, the float16's accuracy is even higher than the float32 and float64 formats. However, the difference is too small to be considered an improvement. 
+The validation score and test score in each format, computed by percent of error rate, for both MNIST and CIFAR  has been shown in the Table below.
 
+<img src="accuracy.png" alt="accuracy" width="600" height="150"/>	
+
+As shown, float16 has little to no impact on accuracy of DNN. In some cases, the float16's accuracy is even higher than the float32 and float64 formats (however, the difference is too small to be considered an improvement). Besides, we can see that float64, the highest precision, does not offer the better accuracy in compared with two lower precision formats. The experiment also shows that CIFAR 10 needs deeper network to gain more accuracy. 
 
 ### 6.2 Peak Memory
+The peak memory in KB has been reported sing memory profiler and shown in below Table.
+
 <img src="mem.png" alt="mem" width="600" height="150"/>	
+
+From the Table, GPU peak memory is much higher than CPU peak memory. In addition, in GPU, the peak memory of float16 is exactly a half of float32 and one fourth of float64, which match with the bidth-width ratio between them. 
 
 ### 6.3 Speed
 <img src="speed.png" alt="cifar10" width="600" height="150"/>	
