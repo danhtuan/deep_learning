@@ -54,9 +54,10 @@ Here are the classes in the dataset, as well as 10 random images from each:
 The classes are completely mutually exclusive. There is no overlap between automobiles and trucks. "Automobile" includes sedans, SUVs, things of that sort. "Truck" includes only big trucks. Neither includes pickup trucks.
 
 ## 4. Convolutional Neural Network
-
+  
 
 ## 5. Experimental Setup
+This project utilized a simplified variation of LeNet5 Convolutional Neural Network that is based on DeepLearning.Net code. The configuration for each dataset is shown in below sections.
 ### 5.1 Convolutional Neural Network for MNIST
 
 
