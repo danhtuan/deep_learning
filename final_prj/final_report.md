@@ -59,7 +59,9 @@ The classes are completely mutually exclusive. There is no overlap between autom
 ## 5. Experimental Setup
 ### 5.1 Convolutional Neural Network for MNIST
 
+
 <img src="cnv_mnist.png" alt="cnv_mnist" width="250" height="300"/>
+
 
 ### 5.2 Convolutional Neural Network for CIFAR-10
 <img src="cnv_cifar.png" alt="cnv_cifar10" width="250" height="300"/>
@@ -69,6 +71,8 @@ The classes are completely mutually exclusive. There is no overlap between autom
  * Softwares: the CNN program has been written in Python based on Theano 9.0 library. Two additional libraries were also installed to support for float16: libgpuarray and pygpu. To do computation/memory profiler, psutil and iPython were also installed.
 
 ## 6. Experimental Results
+For each combination of format and dataset, 3 trials were performed and then computed average to produce the experimental results as below sections.
+
 ### 6.1 Accuracy
 The validation score and test score in each format, computed by percent of error rate, for both MNIST and CIFAR  has been shown in the Table below.
 
